@@ -125,6 +125,9 @@ nav a:hover {
     padding-bottom: 50px;
     text-align: center;
 }
+.section1 h1 {
+    padding-top: 90px;
+}
 .video-player {
     display: block;
     margin: 40px auto;
@@ -151,6 +154,14 @@ nav a:hover {
     width: auto;
     height: auto;
     z-index: -1;
+}
+
+
+.section2 {
+    text-align: center;
+}
+.section2 h2 {
+    color: var(--logo-text);
 }
 
 /**************************************** FOOTER *************************************************/
@@ -316,14 +327,6 @@ nav a:hover {
     }
 }
 @media screen and (max-width: 1199px) {
-    .nav-hide {
-        display: none;
-    }
-    .nav-important {
-        justify-content: space-evenly;
-    }
-    /* SECTION 1 */   
-
     /* FOOTER */
     .footer-grid {
         display: grid;
@@ -333,6 +336,12 @@ nav a:hover {
 
 /* PHONE SCREEN SIZE */
 @media screen and (max-width: 500px) {
+    .nav-hide {
+        display: none;
+    }
+    .nav-important {
+        justify-content: space-evenly;
+    }
     /* CONTACT PAGE */
     .contact-section1 {
         background-color: var(--bg-section2);
