@@ -1,0 +1,367 @@
+:root {
+    --logo-primary-color:    rgb(247, 204, 211);
+    --logo-secondary-color:  rgb(255, 125, 147);
+    --logo-text:             #FFFFFF;
+    --bg-section1:           #F17C72;
+    --bg-section2:           #e8c1bd;
+    --bg-section3:           #FFECEB;
+    --bg-section4:           #FFB4AB;
+    --bg-section5:           #FFECEB;
+    --bg-footer:             rgb(36, 36, 36);
+    --brand-font:            'Montserrat', sans-serif;
+    --navbar-height:         110px;
+  }
+
+html {  
+    font-family: var(--brand-font);
+    overflow-x: hidden;
+}
+
+body {
+    background-color: var(--logo-primary-color);
+    width: 100vw;
+    padding: 0;
+    margin: 0;
+}
+.content-wrapper {
+    padding: 10px 30px;
+}
+.logo {
+    justify-content: left;
+    padding: 0px;
+    width: 100px;
+}
+.btn {
+    text-decoration: none;
+    padding: 15px;
+    border-radius: 8px;
+    font-weight: 700;
+    font-size: larger;
+    display: inline-block;
+    background: var(--logo-primary-color);
+    color: var(--logo-text);
+}
+.btn:hover {
+    opacity: 80%;
+    transition-duration: 1000ms;
+}
+a:hover {
+    opacity: 80%;
+    transition-duration: 500ms;
+}
+h1 {
+    font-size: 50px;
+    font-weight: 700;
+}
+h2 {
+    font-size: 30px;
+    font-weight: 500;
+}
+h3 {
+    color: #5b2a86;
+}
+p {
+    font-weight: 500;
+    font-size: large;
+}
+
+/************** NAVBAR **************/
+nav {
+    background-color: var(--logo-primary-color);
+    display: flex;
+    justify-content: space-evenly;
+    /*For a sticky navbar, keep the following code below*/
+    top: 0;
+    width: 100vw;
+    height: var(--navbar-height);
+    position: fixed;
+    z-index: 1000;
+}
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;   
+}
+nav li {
+    display: inline-block;
+    vertical-align: middle;
+}
+nav a {
+    display: block;
+    color: var(--logo-text);
+    font-family: var(--brand-font);
+    font-weight: 700;
+    font-size: larger;
+    padding: 10px 20px;
+    text-decoration: none;  
+    text-align: center;
+    display: block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+nav a:hover {
+    color: rgb(246, 130, 130);
+}
+
+/********************************************** HOME PAGE *****************************************************/
+/* SECTION 1---------------------------------- */
+.section1 {
+    width: 100vw;
+    height: 80vh;
+    background-color: var(--logo-primary-color);
+    color: var(--logo-text);
+    /*For the sticky navbar positioning, keep the following code below*/
+    padding-top: 110px;
+    padding-bottom: 50px;
+}
+.video-player {
+    display: block;
+    margin: 40px auto;
+}
+.video-text { 
+    padding-top: 100px;
+    text-align: center;
+}
+
+.video-container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+  }
+  
+  .video-container video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -1;
+  }
+
+/**************************************** FOOTER *************************************************/
+.footer-top {
+    background-color: var(--bg-footer);
+    color: var(--logo-text);
+    display: flex;
+    width: 100vw;
+    margin-left: -20px;
+    padding-top: 50px;
+}
+.footer-top p {
+    text-align: left;
+    font-weight: 200;
+}
+.footer-top a {
+    text-decoration: none;
+    color: #FFFFFF;
+}
+.footer-top a:hover {
+    opacity: 60%;
+    animation-duration: 1000ms;
+}
+.footer-top a:visited {
+    color: var(--logo-text);
+}
+.footer-top h2 {
+    display: flex;
+    margin-bottom: 40px;
+    font-size: x-large;
+    font-weight: 700;
+    text-align: left;
+}
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 10px;
+    grid-auto-flow: column;
+    justify-content: space-between;
+    place-items: top;
+    padding: 0px 20px;
+    overflow: hidden;
+    margin: 0;
+    text-align: left;
+}
+.list-footer {
+    list-style: none;
+    padding-left: 0px;
+    grid-row: 1;
+    justify-self: center;
+}
+.footer-top ul {
+    width: 250px;
+}
+.footer-top li {
+    margin-bottom: 20px;
+}
+.footer-logo {
+    width: 350px;
+    margin-top: -40px;
+    margin-bottom: -20px;
+    margin-left: -60px;
+}
+#whatsapp-icon {
+    width: 25px;
+}
+
+.footer-bottom {
+    background-color: var(--bg-footer);
+    display: flex;
+    justify-content: space-between;
+    width: 100vw;
+    margin: 0px;
+    margin-left: -20px;
+    margin-bottom: -20px;
+    color: var(--logo-text);
+}
+.footer-bottom p {
+    margin: 0px;
+    padding: 50px;
+}
+.footer-bottom li {
+    list-style: none;
+    display: inline;
+}
+.footer-socials img {
+    width: 50px;
+    padding-top: 10px;
+}
+
+
+/* MOBILE */
+.menu-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    margin-right: 20px;
+  }
+  
+  .menu-icon .icon,
+  .menu-icon .icon::before,
+  .menu-icon .icon::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 3px;
+    background-color: #fff;
+    transition: all 1s ease-in-out;
+  }
+  
+  .menu-icon .icon::before {
+    transform: translateY(-8px);
+  }
+  
+  .menu-icon .icon::after {
+    transform: translateY(5px);
+  }
+  
+  .menu-items {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    top: 60px;
+    right: 0;
+    margin-top: 50px;
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--logo-primary-color);
+    padding: 10px;
+  }
+  
+  .menu-items ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .menu-items li {
+    margin: 80px 0;
+    text-align: center;
+    font-size: xx-large;
+    font-weight: 700
+  }
+  
+  .menu-items a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 20px;
+  }
+  
+  .show-menu {
+    display: block;
+  }
+  
+/********************************************** RESPONSIVE STYLES *******************************************/
+@media screen and (min-width: 1200px) {
+    footer {
+        text-align: center;
+    }
+}
+@media screen and (max-width: 1199px) {
+    .nav-hide {
+        display: none;
+    }
+    .nav-important {
+        justify-content: space-evenly;
+    }
+    /* SECTION 1 */   
+
+    /* FOOTER */
+    .footer-grid {
+        display: grid;
+        grid-template-columns: repeat(1fr);
+    }
+}
+
+/* PHONE SCREEN SIZE */
+@media screen and (max-width: 500px) {
+    /* CONTACT PAGE */
+    .contact-section1 {
+        background-color: var(--bg-section2);
+        margin-top: 110px;
+        height: 100vh;
+        text-align: center;
+        color: white;
+        list-style: none;
+    }
+    .contact-section1 h1 {
+        margin-top: 20px;
+        margin-bottom: 50px;
+    }
+    .contact-section1 a {
+        color: white;
+        text-decoration: none;
+        font-weight: 700;
+    }
+    .contact-section1 li {
+        margin-top: 20px;
+    }
+
+    .contact-grid {
+        background-color: var(--bg-footer);
+        display: flex;
+        list-style: none;
+        justify-content: space-between;
+        width: 100vw;
+        margin: 0px;
+        padding: 10px;
+        margin-bottom: -20px;
+        color: var(--logo-text);
+    }
+    .contact-grid img {
+        width: 40px;
+    }
+}
