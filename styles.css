@@ -312,9 +312,12 @@ footer {
     .nav-important {
         justify-content: space-evenly;
     }
+    .section1 img {
+        width: 400px;
+    }
     /* CONTACT PAGE */
     .contact iframe {
-        width: 500px;
+        width: 350px;
         height: 1680px;
     }
 }
