@@ -11,6 +11,7 @@
 
 html {  
     font-family: var(--brand-font);
+    background-color: var(--bg-colour);
     overflow-x: hidden;
 }
 body {
@@ -328,7 +329,7 @@ footer {
         justify-content: space-evenly;
     }
     .section1 img {
-        width: 400px;
+        width: 328px;
     }
     /* CONTACT PAGE */
     .contact iframe {
