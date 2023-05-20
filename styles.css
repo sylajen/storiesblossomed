@@ -139,13 +139,27 @@ nav a:visited {
     text-align: center;
 }
 .section1 img {
-    width: 1000px;
+    width: 75%;
     display: flex;
     margin-left: auto;
     margin-right: auto;
     padding-top: 200px;
     margin-top: -50px;
 }
+.section1 video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+.section1 .welcome {
+    background: url(assets/blossoms.webm) repeat center center fixed;
+    background-size: contain; /* or background-size: contain; */
+}
+
+  
 .video-player {
     display: block;
     margin: 40px auto;
