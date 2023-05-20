@@ -1,10 +1,10 @@
 :root {
     --logo-primary-color:    rgb(247, 204, 211);
-    --logo-secondary-color:  rgb(255, 125, 147);
-    --accent-text:           #fec2c2;
+    --header3:               #FFFFFF;
+    --accent-text:           #F8A4A4;
     --black-text:            #333333;
     --bg-colour:             #FFF6F6; /*has been updated*/
-    --bg-footer:             rgb(36, 36, 36);
+    --bg-footer:             #fdc7c7;
     --brand-font:            'Montserrat', sans-serif;
     --navbar-height:         55px;
   }
@@ -58,10 +58,10 @@ h2 {
     font-weight: 500;
 }
 h3 {
-    color: #e65858;
+    color: var(--header3);
 }
 h3 a:visited {
-    color: #e65858;
+    color: var(--header3);
 }
 p {
     font-weight: 500;
@@ -79,6 +79,7 @@ nav {
     height: var(--navbar-height);
     position: fixed;
     z-index: 1000;
+    box-shadow: #333333;
 }
 nav .logo {
     margin-top: 5px;
@@ -191,7 +192,7 @@ nav a:visited {
 
 /**************************************** FOOTER *************************************************/
 footer {
-    background-color: #fab9b9;
+    background-color: var(--bg-footer);
     color: white;
     padding: 20px;
     text-align: center;
@@ -209,7 +210,7 @@ footer {
 }
 
 .footer-content h3 {
-    font-size: 18px;
+    font-size: 25px;
     font-weight: bold;
 }
 
@@ -258,7 +259,7 @@ footer {
     margin-top: 0px;
     width: 100vw;
     height: 100vh;
-    background-color: var(--logo-primary-color);
+    background-color: var(--bg-footer);
     padding: 10px;
   }
   
