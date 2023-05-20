@@ -1,12 +1,9 @@
 :root {
     --logo-primary-color:    rgb(247, 204, 211);
     --logo-secondary-color:  rgb(255, 125, 147);
-    --logo-text:             #fec2c2;
-    --bg-section1:           #FFF6F6; /*has been updated*/
-    --bg-section2:           #e8c1bd;
-    --bg-section3:           #FFECEB;
-    --bg-section4:           #FFB4AB;
-    --bg-section5:           #FFECEB;
+    --accent-text:           #fec2c2;
+    --black-text:            #333333;
+    --bg-colour:             #FFF6F6; /*has been updated*/
     --bg-footer:             rgb(36, 36, 36);
     --brand-font:            'Montserrat', sans-serif;
     --navbar-height:         55px;
@@ -17,7 +14,7 @@ html {
     overflow-x: hidden;
 }
 body {
-    background-color: var(--bg-section1);
+    background-color: var(--bg-colour);
     width: 100vw;
     padding: 0;
     margin: 0;
@@ -35,7 +32,7 @@ body {
     font-size: larger;
     display: inline-block;
     background: var(--logo-primary-color);
-    color: var(--logo-text);
+    color: var(--accent-text);
 }
 .btn:hover {
     opacity: 80%;
@@ -73,7 +70,7 @@ p {
 
 /************** NAVBAR **************/
 nav {
-    background-color: var(--bg-section1);
+    background-color: var(--bg-colour);
     display: flex;
     justify-content: space-evenly;
     /*For a sticky navbar, keep the following code below*/
@@ -103,7 +100,7 @@ nav li {
 }
 nav a {
     display: block;
-    color: var(--logo-text);
+    color: var(--accent-text);
     font-family: var(--brand-font);
     font-weight: 700;
     font-size: larger;
@@ -119,7 +116,7 @@ nav a:hover {
     color: rgb(246, 130, 130);
 }
 nav a:visited {
-    color: var(--logo-text);
+    color: var(--accent-text);
 
 }
 
@@ -128,8 +125,8 @@ nav a:visited {
 .section1 {
     width: 100vw;
     height: 100vh;
-    background-color: var(--bg-section1);
-    color: black;
+    background-color: var(--bg-colour);
+    color: var(--black-text);
     /*For the sticky navbar positioning, keep the following code below*/
     padding-top: 110px;
     margin-left: auto;
@@ -170,13 +167,14 @@ nav a:visited {
 
 .section2 {
     text-align: center;
+    color: var(--black-text);
 }
 .section2 h2 {
-    color: var(--logo-text);
+    color: var(--accent-text);
     padding: 50px 50px;
 }
 .pink-text {
-    color: var(--logo-text);
+    color: var(--accent-text);
 }
 
 
@@ -308,7 +306,7 @@ footer {
     }
     /* CONTACT PAGE */
     .contact-section1 {
-        background-color: var(--bg-section2);
+        background-color: var(--bg-colour);
         margin-top: 110px;
         height: 100vh;
         text-align: center;
@@ -337,7 +335,7 @@ footer {
         margin: 0px;
         padding: 10px;
         margin-bottom: -20px;
-        color: var(--logo-text);
+        color: var(--accent-text);
     }
     .contact-grid img {
         width: 40px;
