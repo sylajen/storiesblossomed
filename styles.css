@@ -136,6 +136,14 @@ nav a:visited {
     padding-top: 90px;
     text-align: center;
 }
+.section1 img {
+    width: 1000px;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 200px;
+    margin-top: -50px;
+}
 .video-player {
     display: block;
     margin: 40px auto;
