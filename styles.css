@@ -147,7 +147,7 @@ nav a:visited {
     padding-top: 200px;
     margin-top: -50px;
 }
-.section1 video {
+.welcome video {
     position: absolute;
     top: 0;
     left: 0;
@@ -175,6 +175,7 @@ nav a:visited {
     width: 100%;
     height: 100vh;
     overflow: hidden;
+    z-index: 1;
   }
   
 .video-container video {
