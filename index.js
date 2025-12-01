@@ -20,3 +20,25 @@ function toggleMenu() {
   }
   
   window.addEventListener('scroll', handleScroll);
+
+  // Rotating words animation
+  document.addEventListener('DOMContentLoaded', function() {
+    const words = document.querySelectorAll('.rotating-word');
+    if (words.length === 0) return;
+    
+    let currentIndex = 0;
+    
+    function rotateWords() {
+      // Remove active class from current word
+      words[currentIndex].classList.remove('active');
+      
+      // Move to next word
+      currentIndex = (currentIndex + 1) % words.length;
+      
+      // Add active class to next word
+      words[currentIndex].classList.add('active');
+    }
+    
+    // Rotate every 3 seconds
+    setInterval(rotateWords, 3000);
+  });

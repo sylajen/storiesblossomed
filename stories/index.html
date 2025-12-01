@@ -40,127 +40,76 @@
         </ul>
       </div>
       
-      <!-- ****************** SECTION 1 ******************* -->
-      <section class="section1 stories">
-        <h1>Our <strong class="pink-text">Stories</strong></h1>
+      <!-- ****************** SECTION 1 - HERO ******************* -->
+      <section class="section1 welcome">
+        <video autoplay loop muted playsinline>
+          <source src="../assets/blossoms.webm" type="video/webm">
+        </video>
+        <div class="hero-text-container">
+          <h1 class="hero-title">Our Stories</h1>
+          <p class="hero-tagline">Discover the moments we've brought to life</p>
+        </div>
       </section>
 
-      <section class="section2 stories container">
-        <div class="video-grid">
-
-          <!-- Niv and Shiv -->
-          <div class="video-card">
-            <div class="yt-wrap">
-              <iframe
-                src="https://www.youtube-nocookie.com/embed/Vq4DY9pzjQ4?rel=0"
-                title="NK-2025-02"
-                loading="lazy"
-                referrerpolicy="strict-origin-when-cross-origin"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                allowfullscreen>
-              </iframe>
-            </div>
-            <a class="yt-caption" href="https://www.youtube.com/watch?v=AK0jE7aq-zU&list=PLwSJ_wiNm7BW4VfanDR0wDqZ3liUlpOQa" target="_blank" rel="noopener">Watch on YouTube</a>
+      <section class="section2 stories">
+        <div class="stories-container netflix-grid">
+          <div class="video-grid" id="netflix-scroll">
+            <!-- Methurra & Nirojan -->
+            <a href="https://www.youtube.com/watch?v=3RM43Xh7ZcY" class="video-card netflix-tile" target="_blank" rel="noopener" data-video-id="3RM43Xh7ZcY">
+              <div class="video-thumbnail" style="background-image: url('../assets/thumbnails/methurra-nirojan-eshoot.jpg');"></div>
+            </a>
+            <!-- Vinu & Thanu -->
+            <a href="https://www.youtube.com/watch?v=Vq4DY9pzjQ4" class="video-card netflix-tile" target="_blank" rel="noopener" data-video-id="Vq4DY9pzjQ4">
+              <div class="video-thumbnail" style="background-image: url('../assets/thumbnails/vinu-thanu-highlight.jpg');"></div>
+            </a>
+            <!-- Theebhigha & Janath -->
+            <a href="https://www.youtube.com/watch?v=lYrulvjC2kY" class="video-card netflix-tile" target="_blank" rel="noopener" data-video-id="lYrulvjC2kY">
+              <div class="video-thumbnail" style="background-image: url('../assets/thumbnails/theebhigha-janath-highlight.jpg');"></div>
+            </a>
+            <!-- Abi & Thanu Proposal -->
+            <a href="https://youtu.be/sROPdgubJW0" class="video-card netflix-tile" target="_blank" rel="noopener" data-video-id="sROPdgubJW0">
+              <div class="video-thumbnail" style="background-image: url('../assets/thumbnails/abi-thanu-prop.jpg');"></div>
+            </a>
+            <!-- Nithiya & Kresanth -->
+            <a href="https://youtu.be/2pfKM3F_r6M" class="video-card netflix-tile" target="_blank" rel="noopener" data-video-id="2pfKM3F_r6M">
+              <div class="video-thumbnail" style="background-image: url('../assets/thumbnails/nithiya-kresanth-highlight.jpg');"></div>
+            </a>
+            <!-- California Proposal -->
+            <a href="https://www.youtube.com/watch?v=pZBd-kroiR8" class="video-card netflix-tile" target="_blank" rel="noopener" data-video-id="pZBd-kroiR8">
+              <div class="video-thumbnail" style="background-image: url('https://img.youtube.com/vi/pZBd-kroiR8/maxresdefault.jpg');"></div>
+            </a>
           </div>
-
-          <!-- K&D -->
-          <div class="video-card">
-            <div class="yt-wrap">
-              <iframe
-                src="https://www.youtube-nocookie.com/embed/lYrulvjC2kY?rel=0"
-                title="NK-2025-02"
-                loading="lazy"
-                referrerpolicy="strict-origin-when-cross-origin"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                allowfullscreen>
-              </iframe>
-            </div>
-            <a class="yt-caption" href="https://www.youtube.com/watch?v=AK0jE7aq-zU&list=PLwSJ_wiNm7BW4VfanDR0wDqZ3liUlpOQa" target="_blank" rel="noopener">Watch on YouTube</a>
+          <div class="netflix-progress-bar">
+            <div class="netflix-progress" id="netflix-progress"></div>
           </div>
-          
-          <!-- NK-2025-02 (playlist entry) -->
-          <div class="video-card">
-            <div class="yt-wrap">
-              <iframe
-                src="https://www.youtube-nocookie.com/embed/AK0jE7aq-zU?rel=0"
-                title="NK-2025-02"
-                loading="lazy"
-                referrerpolicy="strict-origin-when-cross-origin"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                allowfullscreen>
-              </iframe>
-            </div>
-            <a class="yt-caption" href="https://www.youtube.com/watch?v=AK0jE7aq-zU&list=PLwSJ_wiNm7BW4VfanDR0wDqZ3liUlpOQa" target="_blank" rel="noopener">Watch on YouTube</a>
-          </div>
-      
-          <!-- Couple Film (horizontal) -->
-          <div class="video-card">
-            <div class="yt-wrap">
-              <iframe
-                src="https://www.youtube-nocookie.com/embed/yDEdhcA-sA0?rel=0"
-                title="Couple Film"
-                loading="lazy"
-                referrerpolicy="strict-origin-when-cross-origin"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                allowfullscreen>
-              </iframe>
-            </div>
-            <a class="yt-caption" href="https://youtu.be/yDEdhcA-sA0" target="_blank" rel="noopener">Watch on YouTube</a>
-          </div>
-      
-          <!-- Couple Film (vertical / shorts-friendly – same ID ok) -->
-          <div class="video-card">
-            <div class="yt-wrap">
-              <iframe
-                src="https://www.youtube-nocookie.com/embed/yDEdhcA-sA0?rel=0"
-                title="Couple Film (Vertical)"
-                loading="lazy"
-                referrerpolicy="strict-origin-when-cross-origin"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                allowfullscreen>
-              </iframe>
-            </div>
-            <a class="yt-caption" href="https://youtu.be/yDEdhcA-sA0" target="_blank" rel="noopener">Watch on YouTube</a>
-          </div>
-      
-          <!-- California Proposal -->
-          <div class="video-card">
-            <div class="yt-wrap">
-              <iframe
-                src="https://www.youtube-nocookie.com/embed/pZBd-kroiR8?rel=0"
-                title="California Proposal"
-                loading="lazy"
-                referrerpolicy="strict-origin-when-cross-origin"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                allowfullscreen>
-              </iframe>
-            </div>
-            <a class="yt-caption" href="https://youtu.be/pZBd-kroiR8" target="_blank" rel="noopener">Watch on YouTube</a>
-          </div>
-      
-          <!-- Fall Mini Video -->
-          <div class="video-card">
-            <div class="yt-wrap">
-              <iframe
-                src="https://www.youtube-nocookie.com/embed/qh3M7uX3tAA?rel=0"
-                title="Fall Mini Video"
-                loading="lazy"
-                referrerpolicy="strict-origin-when-cross-origin"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                allowfullscreen>
-              </iframe>
-            </div>
-            <a class="yt-caption" href="https://youtu.be/qh3M7uX3tAA" target="_blank" rel="noopener">Watch on YouTube</a>
-          </div>
-      
         </div>
-      
-        <hr class="divider" />
-        <!-- <div class="gallery">
-          <div class="gallery-item"><a href="../assets/gallery/compressed/image31.jpg" target="_blank"><img src="../assets/gallery/compressed/image31.jpg" alt="Image 31"></a></div>
-          <div class="gallery-item"><a href="../assets/gallery/compressed/image32.jpg" target="_blank"><img src="../assets/gallery/compressed/image32.jpg" alt="Image 32"></a></div>
-          <div class="gallery-item"><a href="../assets/gallery/compressed/image33.jpg" target="_blank"><img src="../assets/gallery/compressed/image33.jpg" alt="Image 33"></a></div>
-        </div> -->
+        <script>
+        // Auto-scroll logic for Netflix-style grid
+        const grid = document.getElementById('netflix-scroll');
+        const progress = document.getElementById('netflix-progress');
+        let scrollAmount = 0;
+        let scrollStep = 528; // px per scroll (matches tile width + gap)
+        let interval = 4000; // ms
+        function autoScrollGrid() {
+          if (!grid) return;
+          const maxScroll = grid.scrollWidth - grid.clientWidth;
+          scrollAmount += scrollStep;
+          if (scrollAmount > maxScroll) scrollAmount = 0;
+          grid.scrollTo({ left: scrollAmount, behavior: 'smooth' });
+          // Progress bar update
+          if (progress) {
+            const percent = maxScroll ? (scrollAmount / maxScroll) * 100 : 0;
+            progress.style.width = percent + '%';
+          }
+        }
+        setInterval(autoScrollGrid, interval);
+        </script>
+          <!-- <div class="gallery">
+            <div class="gallery-item"><a href="../assets/gallery/compressed/image31.jpg" target="_blank"><img src="../assets/gallery/compressed/image31.jpg" alt="Image 31"></a></div>
+            <div class="gallery-item"><a href="../assets/gallery/compressed/image32.jpg" target="_blank"><img src="../assets/gallery/compressed/image32.jpg" alt="Image 32"></a></div>
+            <div class="gallery-item"><a href="../assets/gallery/compressed/image33.jpg" target="_blank"><img src="../assets/gallery/compressed/image33.jpg" alt="Image 33"></a></div>
+          </div> -->
+        </div>
       </section>
 
       <section class="section3 stories">
