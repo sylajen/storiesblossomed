@@ -8,9 +8,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,700;0,900;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../styles.css">
     <script src="../index.js"></script>
-    <title>Stories | Stories Blossomed</title>
-    <meta name="description" content="Our Stories | Here you'll find a collection of all the stories that have blossomed and been captured
-     by our talented team.">
+    <title>The Experience | Stories Blossomed</title>
+    <meta name="description" content="Discover the Stories Blossomed experience. We craft bespoke photography and videography that preserves your most meaningful moments with intention and artistry.">
     <link rel="icon" type="image/x-icon" href="../assets/favicon.ico">
   </head>
   <nav>
@@ -46,69 +45,170 @@
           <source src="../assets/blossoms.webm" type="video/webm">
         </video>
         <div class="hero-text-container">
-          <h1 class="hero-title">Our Stories</h1>
-          <p class="hero-tagline">Discover the moments we've brought to life</p>
+          <h1 class="hero-title">The Experience</h1>
+          <p class="hero-tagline">Where your story becomes timeless</p>
         </div>
       </section>
 
-      <section class="section2 stories">
-        <div class="stories-container netflix-grid">
-          <div class="video-grid" id="netflix-scroll">
-            <!-- Methurra & Nirojan -->
-            <a href="https://www.youtube.com/watch?v=3RM43Xh7ZcY" class="video-card netflix-tile" target="_blank" rel="noopener" data-video-id="3RM43Xh7ZcY">
-              <div class="video-thumbnail" style="background-image: url('../assets/thumbnails/methurra-nirojan-eshoot.jpg');"></div>
-            </a>
-            <!-- Vinu & Thanu -->
-            <a href="https://www.youtube.com/watch?v=Vq4DY9pzjQ4" class="video-card netflix-tile" target="_blank" rel="noopener" data-video-id="Vq4DY9pzjQ4">
-              <div class="video-thumbnail" style="background-image: url('../assets/thumbnails/vinu-thanu-highlight.jpg');"></div>
-            </a>
-            <!-- Theebhigha & Janath -->
-            <a href="https://www.youtube.com/watch?v=lYrulvjC2kY" class="video-card netflix-tile" target="_blank" rel="noopener" data-video-id="lYrulvjC2kY">
-              <div class="video-thumbnail" style="background-image: url('../assets/thumbnails/theebhigha-janath-highlight.jpg');"></div>
-            </a>
-            <!-- Abi & Thanu Proposal -->
-            <a href="https://youtu.be/sROPdgubJW0" class="video-card netflix-tile" target="_blank" rel="noopener" data-video-id="sROPdgubJW0">
-              <div class="video-thumbnail" style="background-image: url('../assets/thumbnails/abi-thanu-prop.jpg');"></div>
-            </a>
-            <!-- Nithiya & Kresanth -->
-            <a href="https://youtu.be/2pfKM3F_r6M" class="video-card netflix-tile" target="_blank" rel="noopener" data-video-id="2pfKM3F_r6M">
-              <div class="video-thumbnail" style="background-image: url('../assets/thumbnails/nithiya-kresanth-highlight.jpg');"></div>
-            </a>
-            <!-- California Proposal -->
-            <a href="https://www.youtube.com/watch?v=pZBd-kroiR8" class="video-card netflix-tile" target="_blank" rel="noopener" data-video-id="pZBd-kroiR8">
-              <div class="video-thumbnail" style="background-image: url('https://img.youtube.com/vi/pZBd-kroiR8/maxresdefault.jpg');"></div>
-            </a>
-          </div>
-          <div class="netflix-progress-bar">
-            <div class="netflix-progress" id="netflix-progress"></div>
+      <!-- ****************** SECTION 2 - PHILOSOPHY ******************* -->
+      <section class="luxury-intro">
+        <div class="container">
+          <p class="luxury-tagline">Our Approach</p>
+          <h2 class="luxury-heading">More than <span class="elegant-accent">videography</span></h2>
+          <p class="luxury-description">At Stories Blossomed, we don't just capture moments - we craft an experience that honours your journey. From your first inquiry to the final gallery reveal, every detail is approached with intention and care.</p>
+          <p class="luxury-description">We preserve the raw emotions, intimate details, and fleeting glances that make your celebration uniquely yours. Our goal is to create imagery and films that don't just document your day, but become a cherished part of your legacy for generations to come.</p>
+        </div>
+      </section>
+
+      <!-- ****************** SECTION 3 - TAILORED EXPERIENCE ******************* -->
+      <section class="luxury-team">
+        <div class="container">
+          <h2 class="section-title"><span class="elegant-accent">Photography & Videography</span><br>Crafted For You</h2>
+          <p class="luxury-description" style="max-width: 800px; margin: 0 auto 3rem;">Whether your celebration unfolds in an intimate backyard or across continents, we create bespoke visual stories that transcend the day itself. Every package is tailored to reflect the scope and spirit of your event, ensuring your story is told authentically.</p>
+          
+          <div class="experience-grid">
+            <div class="experience-item">
+              <h3>Personal Connection</h3>
+              <p>We believe the best stories come from genuine relationships. We take time to understand your vision, your love, and what matters most to you.</p>
+            </div>
+            <div class="experience-item">
+              <h3>Artistic Excellence</h3>
+              <p>With years of experience and a passion for our craft, we blend technical skill with creative vision to deliver work that stands the test of time.</p>
+            </div>
+            <div class="experience-item">
+              <h3>Seamless Process</h3>
+              <p>From planning to delivery, we guide you through every step with clear communication, professionalism, and attention to detail.</p>
+            </div>
           </div>
         </div>
-        <script>
-        // Auto-scroll logic for Netflix-style grid
-        const grid = document.getElementById('netflix-scroll');
-        const progress = document.getElementById('netflix-progress');
-        let scrollAmount = 0;
-        let scrollStep = 528; // px per scroll (matches tile width + gap)
-        let interval = 4000; // ms
-        function autoScrollGrid() {
-          if (!grid) return;
-          const maxScroll = grid.scrollWidth - grid.clientWidth;
-          scrollAmount += scrollStep;
-          if (scrollAmount > maxScroll) scrollAmount = 0;
-          grid.scrollTo({ left: scrollAmount, behavior: 'smooth' });
-          // Progress bar update
-          if (progress) {
-            const percent = maxScroll ? (scrollAmount / maxScroll) * 100 : 0;
-            progress.style.width = percent + '%';
-          }
-        }
-        setInterval(autoScrollGrid, interval);
-        </script>
-          <!-- <div class="gallery">
-            <div class="gallery-item"><a href="../assets/gallery/compressed/image31.jpg" target="_blank"><img src="../assets/gallery/compressed/image31.jpg" alt="Image 31"></a></div>
-            <div class="gallery-item"><a href="../assets/gallery/compressed/image32.jpg" target="_blank"><img src="../assets/gallery/compressed/image32.jpg" alt="Image 32"></a></div>
-            <div class="gallery-item"><a href="../assets/gallery/compressed/image33.jpg" target="_blank"><img src="../assets/gallery/compressed/image33.jpg" alt="Image 33"></a></div>
-          </div> -->
+      </section>
+
+      <!-- ****************** SECTION 4 - FEATURED FILMS ******************* -->
+      <section class="featured-films-section">
+        <div class="container featured-films-header">
+          <p class="luxury-tagline">Featured Films</p>
+          <h2 class="luxury-heading">Stories That Have <span class="elegant-accent">Blossomed</span></h2>
+        </div>
+
+        <div class="featured-films-list">
+          <a class="film-card" href="https://www.youtube.com/watch?v=3RM43Xh7ZcY" target="_blank" rel="noopener">
+            <div class="film-image" style="background-image: url('../assets/thumbnails/methurra-nirojan-eshoot.jpg');">
+              <video class="film-video" autoplay loop muted playsinline>
+                <source src="../assets/films/methurra-nirojan.webm" type="video/webm">
+              </video>
+            </div>
+            <div class="film-meta">
+              <span class="film-title">Methurra & Nirojan - California Engagement Session</span>
+              <span class="film-arrow">▶</span>
+            </div>
+          </a>
+
+          <a class="film-card" href="https://www.youtube.com/watch?v=KeGIX7g8fYU" target="_blank" rel="noopener">
+            <div class="film-image" style="background-image: url('../assets/thumbnails/akshana-gabean-highlight.jpg');">
+              <video class="film-video" autoplay loop muted playsinline>
+                <source src="../assets/films/akshana-gabean.webm" type="video/webm">
+              </video>
+            </div>
+            <div class="film-meta">
+              <span class="film-title">Akshana & Gabean - Hindu & Christian Wedding Film - Same Hour Edit</span>
+              <span class="film-arrow">▶</span>
+            </div>
+          </a>
+
+          <a class="film-card" href="https://www.youtube.com/watch?v=5UaqrRHRA-I" target="_blank" rel="noopener">
+            <div class="film-image" style="background-image: url('https://img.youtube.com/vi/5UaqrRHRA-I/maxresdefault.jpg');">
+              <video class="film-video" autoplay loop muted playsinline>
+                <source src="../assets/films/krishna-darshan.webm" type="video/webm">
+              </video>
+            </div>
+            <div class="film-meta">
+              <span class="film-title">Krishna & Darshan - Indian Wedding Highlight Film - Next Day Edit</span>
+              <span class="film-arrow">▶</span>
+            </div>
+          </a>
+
+          <a class="film-card" href="https://youtu.be/2pfKM3F_r6M" target="_blank" rel="noopener">
+            <div class="film-image" style="background-image: url('../assets/thumbnails/nithiya-kresanth-highlight.jpg');">
+              <video class="film-video" autoplay loop muted playsinline>
+                <source src="../assets/films/nithiya-kresanth.webm" type="video/webm">
+              </video>
+            </div>
+            <div class="film-meta">
+              <span class="film-title">Nithiya & Kresanth — Hindu Wedding Highlight Film</span>
+              <span class="film-arrow">▶</span>
+            </div>
+          </a>
+
+          <a class="film-card" href="https://www.youtube.com/watch?v=ungB9BwOoyI" target="_blank" rel="noopener">
+            <div class="film-image" style="background-image: url('https://img.youtube.com/vi/ungB9BwOoyI/maxresdefault.jpg');">
+              <video class="film-video" autoplay loop muted playsinline>
+                <source src="../assets/films/vitoora-christopher.webm" type="video/webm">
+              </video>
+            </div>
+            <div class="film-meta">
+              <span class="film-title">Vitoora & Christopher - Hindu & Christian Wedding Highlight Film</span>
+              <span class="film-arrow">▶</span>
+            </div>
+          </a>
+        </div>
+      </section>
+
+      <!-- ****************** SECTION 5 - INVESTMENT ******************* -->
+      <section class="luxury-intro" style="background: #f9f9f9;">
+        <div class="container">
+          <p class="luxury-tagline">The Investment</p>
+          <h2 class="luxury-heading">Every love story deserves to be <span class="elegant-accent">preserved with intention</span></h2>
+          <p class="luxury-description">Our collections are designed to reflect the care, expertise, and artistry we bring to every celebration. We offer flexible packages to suit various needs—from intimate gatherings to grand destination events.</p>
+          <p class="luxury-description" style="margin-top: 2rem;"><strong>Let's discuss how we can bring your vision to life.</strong></p>
+          <a href="../contact" class="luxury-btn" style="margin-top: 2rem;">Get In Touch</a>
+        </div>
+      </section>
+
+      <!-- ****************** SECTION 6 - FAQ ******************* -->
+      <section class="luxury-team">
+        <div class="container">
+          <h2 class="section-title">Frequently Asked <span class="elegant-accent">Questions</span></h2>
+          
+          <div class="faq-container">
+            <div class="faq-item">
+              <h3>Do you travel for events?</h3>
+              <p>Absolutely! We love capturing stories wherever they unfold. Whether it's across the country or around the world, we're ready to document your celebration. Travel fees may apply for destination events.</p>
+            </div>
+            
+            <div class="faq-item">
+              <h3>Where are you based?</h3>
+              <p>We're based in the Greater Toronto Area, but we work with clients across Ontario and beyond. Distance is never a barrier to capturing your perfect day.</p>
+            </div>
+            
+            <div class="faq-item">
+              <h3>How far in advance should we book?</h3>
+              <p>We recommend booking 6-12 months in advance, especially for peak wedding season. However, we're happy to accommodate shorter timelines when our schedule allows.</p>
+            </div>
+            
+            <div class="faq-item">
+              <h3>When will we receive our photos and videos?</h3>
+              <p>You'll receive a sneak peek within 1-2 weeks. Full galleries are typically delivered within 6-8 weeks, and films within 8-12 weeks. We take time to perfect every detail because your story deserves nothing less.</p>
+            </div>
+            
+            <div class="faq-item">
+              <h3>What's included in your packages?</h3>
+              <p>Each package is customized to your needs, but typically includes full-day coverage, professionally edited photos and/or cinematic films, and an online gallery. We'll work together to create the perfect collection for you.</p>
+            </div>
+            
+            <div class="faq-item">
+              <h3>Can we meet before booking?</h3>
+              <p>We'd love that! We offer complimentary consultations—either virtually or in person—to get to know each other, discuss your vision, and ensure we're the perfect fit for your celebration.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ****************** SECTION 7 - CTA ******************* -->
+      <section class="luxury-cta">
+        <div class="container">
+          <h2 class="cta-heading">Ready to tell your story?</h2>
+          <p class="cta-description">Let's create something beautiful together.</p>
+          <a href="../contact" class="luxury-btn">Start Your Journey</a>
         </div>
       </section>
 
@@ -136,6 +236,22 @@
         <p><a target=”_blank” href="https://www.youtube.com/@storiesblossomed">YouTube</a></p>
       </div>
     </div>
-    <p>Copyright &#169 2024 | Stories Blossomed</p>
+    <p>Copyright &#169 2025 | Stories Blossomed</p>
   </footer>
+
+  <script>
+    // Video fade-in for featured films
+    document.addEventListener('DOMContentLoaded', function() {
+      const filmVideos = document.querySelectorAll('.film-video');
+      filmVideos.forEach(function(video) {
+        video.addEventListener('loadeddata', function() {
+          this.classList.add('loaded');
+        });
+        video.addEventListener('error', function() {
+          // If video fails to load, keep the background image
+          this.style.display = 'none';
+        });
+      });
+    });
+  </script>
 </html>

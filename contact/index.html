@@ -50,21 +50,63 @@
         </div>
       </section>
 
-      <!-- ****************** SECTION 2 - CONTACT FORM ******************* -->
-      <section class="luxury-contact">
-        <div class="container" style="text-align: center;">
-          <h2 class="section-title">Contact <span class="elegant-accent">Us</span></h2>
-          <p class="luxury-description">We'd love to hear from you! For bookings, collaborations, or any questions, please reach out below.</p>
-          <a href="https://tave.com/emphotography/" class="luxury-btn" target="_blank">Contact Us</a>
+      <!-- ****************** SECTION 2 - INQUIRY INTRO ******************* -->
+      <section class="luxury-intro inquiry-section">
+        <video autoplay loop muted playsinline class="inquiry-video">
+          <source src="../assets/inquiry-bg.webm" type="video/webm">
+        </video>
+        <div class="inquiry-overlay"></div>
+        <div class="container inquiry-content">
+          <p class="luxury-tagline">Get In Touch</p>
+          <h2 class="luxury-heading">Tell us about your <span class="elegant-accent">celebration</span></h2>
+          <p class="luxury-description">We'd love to learn more about your vision and discuss how we can capture your story with artistry and care. Fill out the form below and we'll be in touch within 48 hours.</p>
         </div>
       </section>
 
-      <!-- ****************** SECTION 3 - CTA ******************* -->
+      <!-- ****************** SECTION 3 - CONTACT FORM ******************* -->
+      <section class="contact-form-section">
+        <div class="contact-form-wrapper">
+          <iframe data-tally-src="https://tally.so/embed/44Q0jX?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1" loading="lazy" width="100%" height="2990" frameborder="0" marginheight="0" marginwidth="0" title="Stories Blossomed Inquiry"></iframe>
+        </div>
+        <script>var d=document,w="https://tally.so/widgets/embed.js",v=function(){"undefined"!=typeof Tally?Tally.loadEmbeds():d.querySelectorAll("iframe[data-tally-src]:not([src])").forEach((function(e){e.src=e.dataset.tallySrc}))};if("undefined"!=typeof Tally)v();else if(d.querySelector('script[src="'+w+'"]')==null){var s=d.createElement("script");s.src=w,s.onload=v,s.onerror=v,d.body.appendChild(s);}</script>
+      </section>
+
+      <!-- ****************** SECTION 4 - CONTACT INFO ******************* -->
+      <section class="luxury-team">
+        <div class="container">
+          <h2 class="section-title">Other Ways to <span class="elegant-accent">Connect</span></h2>
+          
+          <div class="contact-info-grid">
+            <div class="contact-info-card">
+              <h3>Email</h3>
+              <p><a href="mailto:storiesblossomed@gmail.com">storiesblossomed@gmail.com</a></p>
+              <p class="contact-info-meta">For general inquiries and information</p>
+            </div>
+            
+            <div class="contact-info-card">
+              <h3>Bookings</h3>
+              <p><a href="mailto:info@photoem.net">info@photoem.net</a></p>
+              <p class="contact-info-meta">For wedding and event bookings</p>
+            </div>
+            
+            <div class="contact-info-card">
+              <h3>Follow Us</h3>
+              <p>
+                <a href="https://instagram.com/storiesblossomed" target="_blank">Instagram</a> · 
+                <a href="https://www.tiktok.com/@storiesblossomed/" target="_blank">TikTok</a> · 
+                <a href="https://www.youtube.com/@storiesblossomed" target="_blank">YouTube</a>
+              </p>
+              <p class="contact-info-meta">Stay updated on our latest stories</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ****************** SECTION 5 - CTA ******************* -->
       <section class="luxury-cta">
         <div class="container">
-          <h2 class="cta-heading">Ready to Begin?</h2>
-          <p class="cta-description">Let us transform your moments into timeless memories.</p>
-          <a href="../stories" class="luxury-btn">View Our Stories</a>
+          <h2 class="cta-heading">Can't wait to work with you</h2>
+          <p class="cta-description">Let's capture something extraordinary together.</p>
         </div>
       </section>
     </main>
@@ -90,6 +132,22 @@
     </div>
     <p>Copyright &#169 2025 | Stories Blossomed</p>
   </footer>
+
+  <script>
+    // Video background fade-in for inquiry section
+    const inquiryVideo = document.querySelector('.inquiry-video');
+    const inquirySection = document.querySelector('.inquiry-section');
+    if (inquiryVideo) {
+      inquiryVideo.addEventListener('loadeddata', function() {
+        this.classList.add('loaded');
+        if (inquirySection) inquirySection.classList.add('video-ready');
+      });
+      inquiryVideo.addEventListener('error', function() {
+        // If video fails to load, keep the gradient background
+        this.style.display = 'none';
+      });
+    }
+  </script>
 </html>
 
 
