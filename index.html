@@ -15,17 +15,31 @@
   </head> 
   <nav>
     <ul>
-      <li>
+      <!-- Left Column: Logo -->
+      <li class="nav-left">
         <a href="/">
           <img src="assets/logo.png" alt="Stories Blossomed Logo" class="logo">
         </a>
       </li>
-      <!-- <input type="text" class="search-box" placeholder=""> -->
-      <li><a href="/stories" class="nav-hide"> Stories</a></li>
-      <li><a href="/about" class="nav-hide"> About</a></li>
-      <li><a href="/contact" class="nav-hide"> Contact Us</a></li>
+      
+      <!-- Middle Column: Centered Links as a group -->
+      <li class="nav-center">
+        <div class="nav-links">
+          <a href="/stories" class="nav-hide">Stories</a>
+          <a href="/about" class="nav-hide">About</a>
+          <a href="/contact" class="nav-hide">Contact Us</a>
+        </div>
+      </li>
+
+      <!-- Right Column: Theme toggle -->
+      <li class="nav-right">
+        <button class="theme-toggle" aria-label="Toggle theme" title="Toggle theme">
+          <span class="theme-icon" data-icon-light="☾" data-icon-dark="☀">☾</span>
+        </button>
+      </li>
+      
       <li class="menu-icon" onclick="toggleMenu()">
-        <div class="icon"></div>
+        <div class="icon"><span></span></div>
       </li>
     </ul>
   </nav>
@@ -64,31 +78,20 @@
         </div>
       </section>
 
-      <!-- ****************** SECTION 2 - ELEGANT INTRO ******************* -->
-      <section class="luxury-intro">
-        <div class="container">
+      <!-- ****************** SECTION 2 - ELEGANT INTRO WITH VIDEO ******************* -->
+      <section class="luxury-intro inquiry-section">
+        <video autoplay loop muted playsinline class="inquiry-video">
+          <source src="assets/inquiry-bg.webm" type="video/webm">
+        </video>
+        <div class="inquiry-overlay"></div>
+        <div class="container inquiry-content">
           <p class="luxury-tagline">Where Your Stories Become Timeless</p>
           <h2 class="luxury-heading">Capturing Your Story with <span class="elegant-accent">Elegance & Realness</span></h2>
-          <p class="luxury-description">We specialize in creating breathtaking visual narratives that celebrate life's most precious moments. From intimate celebrations to grand occasions, each frame is crafted with meticulous attention to detail and an unwavering commitment to excellence.</p>
+          <p class="luxury-description">We specialize in creating breathtaking visual narratives that celebrate life's most precious moments. From intimate celebrations to grand occasions, each frame is thought out and captured with meaning.</p>
         </div>
       </section>
 
-      <!-- ****************** SECTION 3 - FEATURED VIDEO ******************* -->
-      <section class="luxury-video-section">
-        <div class="luxury-video-container">
-          <a href="https://youtu.be/5HmeGTCEoUk" target="_blank" class="luxury-video-link">
-            <video autoplay loop muted playsinline>
-              <source src="assets/saree-promov2.mp4" type="video/mp4">
-            </video>
-            <div class="video-overlay">
-              <span class="play-button">▶</span>
-              <p class="video-caption">Watch Our Latest Story</p>
-            </div>
-          </a>
-        </div>
-      </section>
-
-      <!-- ****************** SECTION 4 - SERVICES ******************* -->
+      <!-- ****************** SECTION 3 - SERVICES ******************* -->
       <section class="luxury-services">
         <div class="container">
           <h2 class="section-title">Our <span class="elegant-accent">Services</span></h2>
@@ -153,7 +156,7 @@
       </div>
       <div class="footer-content">
         <h3>Contact</h3>
-        <p>Bookings: <a href="info@photoem.net">info@photoem.net</a></p>
+        <!-- <p>Wedding Bookings: <a href="info@photoem.net">info@photoem.net</a></p> -->
         <p>Info: <a href="mailto://storiesblossomed@gmail.com">storiesblossomed@gmail.com</a></p>
       </div>
       <div class="footer-content">
@@ -165,4 +168,20 @@
     </div>
     <p>Copyright &#169 2025 | Stories Blossomed</p>
   </footer>
+
+  <script>
+    // Video background fade-in for inquiry section
+    const inquiryVideo = document.querySelector('.inquiry-video');
+    const inquirySection = document.querySelector('.inquiry-section');
+    if (inquiryVideo) {
+      inquiryVideo.addEventListener('loadeddata', function() {
+        this.classList.add('loaded');
+        if (inquirySection) inquirySection.classList.add('video-ready');
+      });
+      inquiryVideo.addEventListener('error', function() {
+        // If video fails to load, keep the gradient background
+        this.style.display = 'none';
+      });
+    }
+  </script>
 </html>

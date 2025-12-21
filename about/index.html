@@ -19,12 +19,24 @@
           <img src="../assets/logo.png" alt="Stories Blossomed Logo" class="logo">
         </a>
       </li>
-      <!-- <input type="text" class="search-box" placeholder=""> -->
-      <li><a href="../stories" class="nav-hide"> Stories</a></li>
-      <li><a href="../about" class="nav-hide"> About</a></li>
-      <li><a href="../contact" class="nav-hide"> Contact Us</a></li>
+      <!-- Middle Column: Centered Links as a group -->
+      <li class="nav-center">
+        <div class="nav-links">
+          <a href="../stories" class="nav-hide">Stories</a>
+          <a href="../about" class="nav-hide active">About</a>
+          <a href="../contact" class="nav-hide">Contact Us</a>
+        </div>
+      </li>
+
+      <!-- Right Column: Theme toggle -->
+      <li class="nav-right">
+        <button class="theme-toggle" aria-label="Toggle theme" title="Toggle theme">
+          <span class="theme-icon" data-icon-light="☾" data-icon-dark="☀">☾</span>
+        </button>
+      </li>
+      
       <li class="menu-icon" onclick="toggleMenu()">
-        <div class="icon"></div>
+        <div class="icon"><span></span></div>
       </li>
     </ul>
   </nav>
@@ -63,25 +75,39 @@
       <section class="luxury-team">
         <div class="container">
           <h2 class="section-title">Meet the <span class="elegant-accent">Team</span></h2>
-          <div class="team-grid">
-            <div class="team-member">
-              <img src="../assets/team1.jpg" alt="Sailajan S." class="team-photo">
-              <h3>Sailajan S.</h3>
-              <p class="team-role">Founder</p>
-              <p class="team-bio">Sailajan is the visionary founder of Stories Blossomed, dedicated to capturing authentic moments and helping every story shine.</p>
-            </div>
-            <div class="team-member">
-              <img src="../assets/team2.jpg" alt="Bavish" class="team-photo">
-              <h3>Bavish</h3>
-              <p class="team-role">On-Set Assistant & Photographer</p>
-              <p class="team-bio">With a marketing background and a passion for photography, Bavish brings energy and creativity to every shoot.</p>
-            </div>
-            <div class="team-member">
-              <img src="../assets/team3.jpg" alt="Salini" class="team-photo">
-              <h3>Salini</h3>
-              <p class="team-role">On-Set Assistant & Photographer</p>
-              <p class="team-bio">An electrical engineering student, Salini is passionate about capturing beautiful moments and bringing technical skill to the team.</p>
-            </div>
+          <div class="team-grid cards">
+            <a class="team-card" href="https://www.linkedin.com/in/bavish" target="_blank" rel="noopener">
+              <div class="team-card-media" style="background-image: url('../assets/team2.jpg');"></div>
+              <div class="team-card-footer">
+                <h3>Bavish</h3>
+                <p class="team-role">Photographer & On-Set Assistant</p>
+              </div>
+              <div class="team-card-overlay">
+                <p>With a marketing background and a passion for photography, Bavish brings a special creativity to every shoot.</p>
+              </div>
+            </a>
+            
+            <a class="team-card" href="https://www.linkedin.com/in/sailajan" target="_blank" rel="noopener">
+              <div class="team-card-media" style="background-image: url('../assets/team1.jpg');"></div>
+              <div class="team-card-footer">
+                <h3>Sailajan S.</h3>
+                <p class="team-role">Founder & Cinematographer</p>
+              </div>
+              <div class="team-card-overlay">
+                <p>Sailajan is the founder of Stories Blossomed, combining his passion for filmmaking with making genuine connections.</p>
+              </div>
+            </a>
+
+            <a class="team-card" href="https://www.linkedin.com/in/salinisiva" target="_blank" rel="noopener">
+              <div class="team-card-media" style="background-image: url('../assets/team3.jpg');"></div>
+              <div class="team-card-footer">
+                <h3>Salini</h3>
+                <p class="team-role">Photographer & On-Set Assistant</p>
+              </div>
+              <div class="team-card-overlay">
+                <p>An electrical engineering student, Salini is passionate about capturing beautiful moments and bringing technical skill to the team.</p>
+              </div>
+            </a>
           </div>
         </div>
       </section>
@@ -104,7 +130,7 @@
       </div>
       <div class="footer-content">
         <h3>Contact</h3>
-        <p>Bookings: <a href="info@photoem.net">info@photoem.net</a></p>
+        <!-- <p>Bookings: <a href="info@photoem.net">info@photoem.net</a></p> -->
         <p>Info: <a href="mailto://storiesblossomed@gmail.com">storiesblossomed@gmail.com</a></p>
       </div>
       <div class="footer-content">

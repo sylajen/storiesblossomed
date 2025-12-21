@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,700;0,900;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles.css">
+    <script src="../index.js"></script>
+    <title>Resources | Stories Blossomed</title>
+    <meta name="description" content="Explore our curated collection of free and premium resources for photographers and videographers. Templates, presets, LUTs, and more.">
+    <link rel="icon" type="image/x-icon" href="../assets/favicon.ico">
+  </head>
+  <nav>
+    <ul>
+      <!-- Left Column: Logo -->
+      <li class="nav-left">
+        <a href="../">
+          <img src="../assets/logo.png" alt="Stories Blossomed Logo" class="logo">
+        </a>
+      </li>
+      
+      <!-- Middle Column: Centered Links as a group -->
+      <li class="nav-center">
+        <div class="nav-links">
+          <a href="../stories" class="nav-hide">Stories</a>
+          <a href="../about" class="nav-hide">About</a>
+          <a href="../contact" class="nav-hide">Contact Us</a>
+        </div>
+      </li>
+
+      <!-- Right Column: Theme toggle -->
+      <li class="nav-right">
+        <button class="theme-toggle" aria-label="Toggle theme" title="Toggle theme">
+          <span class="theme-icon" data-icon-light="☾" data-icon-dark="☀">☾</span>
+        </button>
+      </li>
+      
+      <li class="menu-icon" onclick="toggleMenu()">
+        <div class="icon"><span></span></div>
+      </li>
+    </ul>
+  </nav>
+  <body>
+    <main>
+      <div class="menu-items" id="menu-items">
+        <ul>
+          <li><a href="../">Home</a></li>
+          <li><a href="../stories">Stories</a></li>
+          <li><a href="../about">About</a></li>
+          <li><a href="../contact">Contact</a></li>
+        </ul>
+      </div>
+      
+      <!-- ****************** SECTION 1 - HERO ******************* -->
+      <section class="section1 welcome">
+        <video autoplay loop muted playsinline>
+          <source src="../assets/blossoms.webm" type="video/webm">
+        </video>
+        <div class="hero-text-container">
+          <h1 class="hero-title">Resources</h1>
+          <p class="hero-tagline">Tools to elevate your craft</p>
+        </div>
+      </section>
+
+      <!-- ****************** SECTION 2 - INTRO ******************* -->
+      <section class="luxury-intro">
+        <div class="container">
+          <p class="luxury-tagline">For Creatives</p>
+          <h2 class="luxury-heading">Curated <span class="elegant-accent">resources</span> for photographers & videographers</h2>
+          <p class="luxury-description">We believe in empowering the creative community. Whether you're just starting out or refining your workflow, explore our collection of free and premium tools designed to help you craft visual stories with confidence and style.</p>
+        </div>
+      </section>
+
+      <!-- ****************** SECTION 3 - FREE RESOURCES ******************* -->
+      <section class="luxury-team">
+        <div class="container">
+          <h2 class="section-title"><span class="elegant-accent">Free</span> Resources</h2>
+          <p class="luxury-description" style="max-width: 800px; margin: 0 auto 3rem;">Start building your toolkit with these complimentary assets—no strings attached.</p>
+          
+          <div class="resource-grid">
+            <!-- Placeholder cards -->
+            <div class="resource-card">
+              <div class="resource-image" style="background: linear-gradient(135deg, var(--luxury-pink-200), var(--luxury-pink-300));"></div>
+              <div class="resource-info">
+                <h3>Sample Preset Pack</h3>
+                <p class="resource-type">FREE</p>
+                <p>A starter collection of film-inspired presets for Lightroom.</p>
+                <a href="#" class="resource-btn">Download</a>
+              </div>
+            </div>
+
+            <div class="resource-card">
+              <div class="resource-image" style="background: linear-gradient(135deg, var(--luxury-pink-300), var(--luxury-pink-400));"></div>
+              <div class="resource-info">
+                <h3>Contract Template</h3>
+                <p class="resource-type">FREE</p>
+                <p>Protect your business with our client agreement template.</p>
+                <a href="#" class="resource-btn">Download</a>
+              </div>
+            </div>
+
+            <div class="resource-card">
+              <div class="resource-image" style="background: linear-gradient(135deg, var(--luxury-pink-100), var(--luxury-pink-200));"></div>
+              <div class="resource-info">
+                <h3>Workflow Guide</h3>
+                <p class="resource-type">FREE</p>
+                <p>Our step-by-step guide to streamlining your editing process.</p>
+                <a href="#" class="resource-btn">Download</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ****************** SECTION 4 - PREMIUM RESOURCES ******************* -->
+      <section class="luxury-intro" style="background: #f9f9f9;">
+        <div class="container">
+          <h2 class="section-title"><span class="elegant-accent">Premium</span> Resources</h2>
+          <p class="luxury-description" style="max-width: 800px; margin: 0 auto 3rem;">Unlock pro-level tools and assets to take your work to the next level.</p>
+          
+          <div class="resource-grid">
+            <!-- Placeholder cards -->
+            <div class="resource-card premium">
+              <div class="resource-image" style="background: linear-gradient(135deg, #D4AF37, #B76E79);"></div>
+              <div class="resource-info">
+                <h3>Cinematic LUT Collection</h3>
+                <p class="resource-type">$49</p>
+                <p>Transform your footage with 25 professionally graded color LUTs.</p>
+                <a href="#" class="resource-btn premium-btn">Purchase</a>
+              </div>
+            </div>
+
+            <div class="resource-card premium">
+              <div class="resource-image" style="background: linear-gradient(135deg, var(--luxury-pink-400), #B76E79);"></div>
+              <div class="resource-info">
+                <h3>Complete Preset Bundle</h3>
+                <p class="resource-type">$89</p>
+                <p>Over 100 Lightroom presets for every style and occasion.</p>
+                <a href="#" class="resource-btn premium-btn">Purchase</a>
+              </div>
+            </div>
+
+            <div class="resource-card premium">
+              <div class="resource-image" style="background: linear-gradient(135deg, #2C2C2C, var(--luxury-pink-300));"></div>
+              <div class="resource-info">
+                <h3>Business Starter Kit</h3>
+                <p class="resource-type">$129</p>
+                <p>Everything you need to launch your photography business.</p>
+                <a href="#" class="resource-btn premium-btn">Purchase</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ****************** SECTION 5 - CTA ******************* -->
+      <section class="luxury-cta">
+        <div class="container">
+          <h2 class="cta-heading">Want to stay updated?</h2>
+          <p class="cta-description">Join our mailing list for exclusive resources, tips, and early access to new products.</p>
+          <a href="../contact" class="luxury-btn">Get In Touch</a>
+        </div>
+      </section>
+
+    </main>
+  </body>
+  <footer>
+    <div class="footer-container">
+      <div class="footer-content">
+        <h3> <a href="../about/">About Us</a></h3>
+        <p>Let us show the world how your Stories Blossomed into what it is today.</p>
+      </div>
+      <div class="footer-content">
+        <h3>Contact</h3>
+        <p>Info: <a href="mailto://storiesblossomed@gmail.com">storiesblossomed@gmail.com</a></p>
+      </div>
+      <div class="footer-content">
+        <h3>Socials</h3>
+        <p><a target="_blank" href="https://instagram.com/storiesblossomed">Instagram</a></p>
+        <p><a target="_blank" href="https://www.tiktok.com/@storiesblossomed/">TikTok</a></p>
+        <p><a target="_blank" href="https://www.youtube.com/@storiesblossomed">YouTube</a></p>
+      </div>
+    </div>
+    <p>Copyright &#169 2025 | Stories Blossomed</p>
+  </footer>
+</html>

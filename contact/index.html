@@ -19,12 +19,24 @@
           <img src="../assets/logo.png" alt="Stories Blossomed Logo" class="logo">
         </a>
       </li>
-      <!-- <input type="text" class="search-box" placeholder=""> -->
-      <li><a href="../stories" class="nav-hide"> Stories</a></li>
-      <li><a href="../about" class="nav-hide"> About</a></li>
-      <li><a href="../contact" class="nav-hide"> Contact Us</a></li>
+      <!-- Middle Column: Centered Links as a group -->
+      <li class="nav-center">
+        <div class="nav-links">
+          <a href="../stories" class="nav-hide">Stories</a>
+          <a href="../about" class="nav-hide">About</a>
+          <a href="../contact" class="nav-hide active">Contact Us</a>
+        </div>
+      </li>
+
+      <!-- Right Column: Theme toggle -->
+      <li class="nav-right">
+        <button class="theme-toggle" aria-label="Toggle theme" title="Toggle theme">
+          <span class="theme-icon" data-icon-light="☾" data-icon-dark="☀">☾</span>
+        </button>
+      </li>
+      
       <li class="menu-icon" onclick="toggleMenu()">
-        <div class="icon"></div>
+        <div class="icon"><span></span></div>
       </li>
     </ul>
   </nav>
@@ -35,7 +47,7 @@
           <li><a href="../">Home</a></li>
           <li><a href="../stories">Stories</a></li>
           <li><a href="../about">About</a></li>
-          <li><a href="../contact">Contact Us</a></li>
+          <li><a href="../contact">Contact</a></li>
         </ul>
       </div>
 
@@ -59,7 +71,7 @@
         <div class="container inquiry-content">
           <p class="luxury-tagline">Get In Touch</p>
           <h2 class="luxury-heading">Tell us about your <span class="elegant-accent">celebration</span></h2>
-          <p class="luxury-description">We'd love to learn more about your vision and discuss how we can capture your story with artistry and care. Fill out the form below and we'll be in touch within 48 hours.</p>
+          <p class="luxury-description">We'd love to learn more about your vision and discuss how we can capture your story with artistry and care. Fill out the form below and we'll be in touch.</p>
         </div>
       </section>
 
@@ -106,7 +118,7 @@
       <section class="luxury-cta">
         <div class="container">
           <h2 class="cta-heading">Can't wait to work with you</h2>
-          <p class="cta-description">Let's capture something extraordinary together.</p>
+          <p class="cta-description">Let's capture something <span class="cta-accent">extraordinary</span> together.</p>
         </div>
       </section>
     </main>
@@ -120,7 +132,7 @@
       </div>
       <div class="footer-content">
         <h3>Contact</h3>
-        <p>Bookings: <a href="info@photoem.net">info@photoem.net</a></p>
+        <!-- <p>Wedding Bookings: <a href="info@photoem.net">info@photoem.net</a></p> -->
         <p>Info: <a href="mailto://storiesblossomed@gmail.com">storiesblossomed@gmail.com</a></p>
       </div>
       <div class="footer-content">
@@ -147,6 +159,28 @@
         this.style.display = 'none';
       });
     }
+
+    // Tally form dark mode handling
+    function updateTallyTheme() {
+      const iframe = document.querySelector('iframe[data-tally-src]');
+      const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+      
+      if (iframe && isDark) {
+        iframe.style.filter = 'invert(1) hue-rotate(180deg)';
+      } else if (iframe) {
+        iframe.style.filter = 'none';
+      }
+    }
+
+    // Update on page load
+    updateTallyTheme();
+
+    // Listen for theme changes
+    const observer = new MutationObserver(updateTallyTheme);
+    observer.observe(document.documentElement, {
+      attributes: true,
+      attributeFilter: ['data-theme']
+    });
   </script>
 </html>
 

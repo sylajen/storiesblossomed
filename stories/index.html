@@ -14,17 +14,31 @@
   </head>
   <nav>
     <ul>
-      <li>
+      <!-- Left Column: Logo -->
+      <li class="nav-left">
         <a href="../">
           <img src="../assets/logo.png" alt="Stories Blossomed Logo" class="logo">
         </a>
       </li>
-      <!-- <input type="text" class="search-box" placeholder=""> -->
-      <li><a href="../stories" class="nav-hide"> Stories</a></li>
-      <li><a href="../about" class="nav-hide"> About</a></li>
-      <li><a href="../contact" class="nav-hide"> Contact Us</a></li>
+      
+      <!-- Middle Column: Centered Links as a group -->
+      <li class="nav-center">
+        <div class="nav-links">
+          <a href="../stories" class="nav-hide active">Stories</a>
+          <a href="../about" class="nav-hide">About</a>
+          <a href="../contact" class="nav-hide">Contact Us</a>
+        </div>
+      </li>
+
+      <!-- Right Column: Theme toggle -->
+      <li class="nav-right">
+        <button class="theme-toggle" aria-label="Toggle theme" title="Toggle theme">
+          <span class="theme-icon" data-icon-light="☾" data-icon-dark="☀">☾</span>
+        </button>
+      </li>
+      
       <li class="menu-icon" onclick="toggleMenu()">
-        <div class="icon"></div>
+        <div class="icon"><span></span></div>
       </li>
     </ul>
   </nav>
@@ -226,7 +240,7 @@
       </div>
       <div class="footer-content">
         <h3>Contact</h3>
-        <p>Bookings: <a href="info@photoem.net">info@photoem.net</a></p>
+        <!-- <p>Bookings: <a href="info@photoem.net">info@photoem.net</a></p> -->
         <p>Info: <a href="mailto://storiesblossomed@gmail.com">storiesblossomed@gmail.com</a></p>
       </div>
       <div class="footer-content">
