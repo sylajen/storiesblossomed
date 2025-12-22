@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Map | Stories Blossomed</title>
+    <link rel="icon" type="image/x-icon" href="../assets/favicon.ico">
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        width: 100vw;
+        height: 100vh;
+        overflow: hidden;
+        background-color: #000;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .map-container {
+        width: 100%;
+        height: 100%;
+        position: relative;
+        overflow: auto;
+        -webkit-overflow-scrolling: touch;
+      }
+
+      .map-image {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        display: block;
+        user-select: none;
+        -webkit-user-select: none;
+      }
+
+      /* Enable pinch-to-zoom on mobile */
+      @media screen and (max-width: 768px) {
+        .map-container {
+          overflow: auto;
+          touch-action: pan-x pan-y pinch-zoom;
+        }
+
+        .map-image {
+          max-width: none;
+          width: auto;
+          height: auto;
+          min-width: 100%;
+          min-height: 100%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="map-container">
+      <img src="../assets/map.png" alt="Map" class="map-image">
+    </div>
+  </body>
+</html>
