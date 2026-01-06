@@ -166,7 +166,7 @@
         <p><a target=”_blank” href="https://www.youtube.com/@storiesblossomed">YouTube</a></p>
       </div>
     </div>
-    <p>Copyright &#169 2025 | Stories Blossomed</p>
+    <p>Copyright &#169 <span class="js-year"></span> | Stories Blossomed</p>
   </footer>
 
   <script>
@@ -183,5 +183,14 @@
         this.style.display = 'none';
       });
     }
+  </script>
+  <script>
+    // Set footer year to current year
+    (function() {
+      var yearEl = document.querySelector('.js-year');
+      if (yearEl) {
+        yearEl.textContent = new Date().getFullYear();
+      }
+    })();
   </script>
 </html>

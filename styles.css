@@ -981,6 +981,13 @@ nav a:visited {
   font-weight: 400;
 }
 
+/* Dark mode: keep experience cards readable with brand gradient */
+[data-theme="dark"] .luxury-experience .experience-step {
+  background: linear-gradient(135deg, rgba(248, 164, 164, 0.18) 0%, rgba(240, 124, 146, 0.24) 100%);
+  border-color: rgba(248, 164, 164, 0.35);
+  box-shadow: 0 14px 40px rgba(0, 0, 0, 0.35);
+}
+
 /* Inquiry Section with Video Background */
 .inquiry-section {
   position: relative;
