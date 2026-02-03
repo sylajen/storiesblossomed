@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Client Galleries - Stories Blossomed</title>
+    <link rel="icon" type="image/x-icon" href="../assets/favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,700;0,900;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <nav>
+    <ul>
+      <!-- Left Column: Logo -->
+      <li class="nav-left">
+        <a href="/">
+          <img src="../assets/logo.png" alt="Stories Blossomed Logo" class="logo">
+        </a>
+      </li>
+      
+      <!-- Right Column: Theme toggle -->
+      <li class="nav-right">
+        <button class="theme-toggle" aria-label="Toggle theme" title="Toggle theme">
+          <span class="theme-icon" data-icon-light="☾" data-icon-dark="☀">☾</span>
+        </button>
+      </li>
+      
+      <li class="menu-icon" onclick="toggleMenu()">
+        <div class="icon"><span></span></div>
+      </li>
+    </ul>
+  </nav>
+
+  <main>
+    <header class="clients-hub-header">
+        <div class="header-content">
+            <h1>Client Galleries</h1>
+            <p class="header-subtitle">Find your special moments</p>
+        </div>
+    </header>
+
+    <!-- Search Bar -->
+    <div class="search-container">
+        <div class="search-wrapper">
+            <input 
+                type="text" 
+                id="search-input" 
+                class="search-bar" 
+                placeholder="Search for your name..."
+                autocomplete="off"
+            >
+            <span class="search-icon">🔍</span>
+        </div>
+        <p class="search-hint" id="search-hint"></p>
+    </div>
+
+    <!-- No Results Message -->
+    <div id="no-results" class="no-results hidden">
+        <p>No clients found matching "<span id="search-term"></span>"</p>
+        <p class="no-results-hint">Try searching for a different name</p>
+    </div>
+
+    <!-- Masonry Grid -->
+    <div class="masonry-container">
+        <div id="clients-grid" class="clients-grid"></div>
+    </div>
+
+    <!-- Back to Home -->
+    <div class="back-link">
+        <a href="/">← Back to Home</a>
+    </div>
+  </main>
+
+  <script src="index.js"></script>
+  <script src="clients-data.js"></script>
+  <script src="clients-hub.js"></script>
+</body>
+</html>

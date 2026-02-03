@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>[CLIENT_NAMES] - Stories Blossomed</title>
+    <link rel="icon" type="image/x-icon" href="../../assets/favicon.ico">
+    <link rel="stylesheet" href="../../styles.css">
+</head>
+<body>
+  <nav>
+    <ul>
+      <!-- Left Column: Logo -->
+      <li class="nav-left">
+        <a href="/">
+          <img src="../../assets/logo.png" alt="Stories Blossomed Logo" class="logo">
+        </a>
+      </li>
+      
+      <!-- Right Column: Theme toggle -->
+      <li class="nav-right">
+        <button class="theme-toggle" aria-label="Toggle theme" title="Toggle theme">
+          <span class="theme-icon" data-icon-light="☾" data-icon-dark="☀">☾</span>
+        </button>
+      </li>
+      
+      <li class="menu-icon" onclick="toggleMenu()">
+        <div class="icon"><span></span></div>
+      </li>
+    </ul>
+  </nav>
+
+  <main>
+    
+    <!-- PIN Protection Overlay -->
+    <div id="pin-overlay" class="pin-overlay">
+        <div class="pin-container">
+            <h2>Enter PIN</h2>
+            <p>Please enter your PIN to access your gallery</p>
+            <input type="password" id="pin-input" maxlength="6" placeholder="Enter PIN">
+            <button onclick="checkPin()">Access Gallery</button>
+            <p id="pin-error" class="error-message"></p>
+        </div>
+    </div>
+
+    <!-- Client Content (Hidden until PIN is verified) -->
+    <div id="client-content" class="client-content hidden">
+        <!-- Background Image -->
+        <div class="background-image" style="background-image: url('[BACKGROUND_IMAGE_PATH]');"></div>
+        
+        <!-- Header -->
+        <div class="client-header">
+            <h1 class="client-names">[CLIENT_NAMES]</h1>
+            <p class="tagline">Your Stories, Beautifully Preserved</p>
+        </div>
+
+        <!-- Events Section -->
+        <div class="events-container">
+            <!-- EVENT 1 - Copy and paste this section for multiple events -->
+            <div class="event-card">
+                <h2 class="event-title">[EVENT_NAME_1]</h2>
+                <p class="event-date">[EVENT_DATE_1]</p>
+                
+                <div class="deliverables">
+                    <!-- Photos Link -->
+                    <a href="[PHOTOS_LINK_1]" target="_blank" class="deliverable-link photos">
+                        <div class="icon">📸</div>
+                        <div class="details">
+                            <h3>Photos</h3>
+                            <p>View your photo gallery</p>
+                        </div>
+                    </a>
+
+                    <!-- Videos Link -->
+                    <a href="[VIDEOS_LINK_1]" target="_blank" class="deliverable-link videos">
+                        <div class="icon">🎥</div>
+                        <div class="details">
+                            <h3>Videos</h3>
+                            <p>Watch your video highlights</p>
+                        </div>
+                    </a>
+
+                    <!-- Optional: Additional deliverables -->
+                    <!-- <a href="[ADDITIONAL_LINK]" target="_blank" class="deliverable-link special">
+                        <div class="icon">✨</div>
+                        <div class="details">
+                            <h3>Special Edits</h3>
+                            <p>Custom creations just for you</p>
+                        </div>
+                    </a> -->
+                </div>
+            </div>
+
+            <!-- EVENT 2 - Add more event cards as needed -->
+            <!-- <div class="event-card">
+                <h2 class="event-title">[EVENT_NAME_2]</h2>
+                <p class="event-date">[EVENT_DATE_2]</p>
+                
+                <div class="deliverables">
+                    <a href="[PHOTOS_LINK_2]" target="_blank" class="deliverable-link photos">
+                        <div class="icon">📸</div>
+                        <div class="details">
+                            <h3>Photos</h3>
+                            <p>View your photo gallery</p>
+                        </div>
+                    </a>
+
+                    <a href="[VIDEOS_LINK_2]" target="_blank" class="deliverable-link videos">
+                        <div class="icon">🎥</div>
+                        <div class="details">
+                            <h3>Videos</h3>
+                            <p>Watch your video highlights</p>
+                        </div>
+                    </a>
+                </div>
+            </div> -->
+        </div>
+
+        <!-- Footer Message -->
+        <div class="client-footer">
+            <p>Thank you for trusting us with your special moments ✨</p>
+            <p class="contact-info">Questions? <a href="mailto:storiesblossomed@gmail.com">Contact us</a></p>
+        </div>
+    </div>
+  </main>
+
+  <script src="../../index.js"></script>
+  <script>
+    // CONFIGURATION: Set the PIN for this client page
+    const CLIENT_PIN = '[PIN_CODE]'; // Change this for each client
+    const CLIENT_KEY = 'clientPin_[client-slug]'; // Unique key - replace [client-slug] with actual client folder name
+
+    // Check if PIN is already verified in session
+    window.onload = function() {
+        if (sessionStorage.getItem(CLIENT_KEY) === 'true') {
+            showContent();
+        }
+    };
+
+    function checkPin() {
+        const inputPin = document.getElementById('pin-input').value;
+        const errorElement = document.getElementById('pin-error');
+
+        if (inputPin === CLIENT_PIN) {
+            sessionStorage.setItem(CLIENT_KEY, 'true');
+            showContent();
+        } else {
+            errorElement.textContent = 'Incorrect PIN. Please try again.';
+            document.getElementById('pin-input').value = '';
+            
+            // Shake animation
+            document.querySelector('.pin-container').classList.add('shake');
+            setTimeout(() => {
+                document.querySelector('.pin-container').classList.remove('shake');
+            }, 500);
+        }
+    }
+
+    function showContent() {
+        document.getElementById('pin-overlay').style.display = 'none';
+        document.getElementById('client-content').classList.remove('hidden');
+    }
+
+    // Allow Enter key to submit PIN
+    document.getElementById('pin-input').addEventListener('keypress', function(event) {
+        if (event.key === 'Enter') {
+            checkPin();
+        }
+    });
+  </script>
+</body>
+</html>
+</html>

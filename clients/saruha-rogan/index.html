@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="page-title">Client Gallery - Stories Blossomed</title>
+    <link rel="icon" type="image/x-icon" href="../../assets/favicon.ico">
+    <link rel="stylesheet" href="../../styles.css">
+</head>
+<body>
+  <nav>
+    <ul>
+      <!-- Left Column: Logo -->
+      <li class="nav-left">
+        <a href="/">
+          <img src="../../assets/logo.png" alt="Stories Blossomed Logo" class="logo">
+        </a>
+      </li>
+      
+      <!-- Right Column: Theme toggle -->
+      <li class="nav-right">
+        <button class="theme-toggle" aria-label="Toggle theme" title="Toggle theme">
+          <span class="theme-icon" data-icon-light="☾" data-icon-dark="☀">☾</span>
+        </button>
+      </li>
+      
+      <li class="menu-icon" onclick="toggleMenu()">
+        <div class="icon"><span></span></div>
+      </li>
+    </ul>
+  </nav>
+
+  <main>
+    <!-- PIN Protection Overlay -->
+    <div id="pin-overlay" class="pin-overlay">
+        <div class="pin-container">
+            <h2>Enter PIN</h2>
+            <p>Please enter your PIN to access your gallery</p>
+            <p class="pin-hint" id="pin-hint" style="font-size: 0.9em; color: var(--luxury-pink-400); margin-bottom: 15px;"></p>
+            <input type="password" id="pin-input" maxlength="8" placeholder="Enter PIN">
+            <button onclick="checkPin()">Access Gallery</button>
+            <p id="pin-error" class="error-message"></p>
+        </div>
+    </div>
+
+    <!-- Client Content (Hidden until PIN is verified) -->
+    <div id="client-content" class="client-content hidden">
+        <!-- Background Image -->
+        <div class="background-image" id="background-image"></div>
+        
+        <!-- Header -->
+        <div class="client-header">
+            <h1 class="client-names" id="client-names">Client Name</h1>
+            <p class="tagline" id="client-tagline">Your Stories, Beautifully Preserved</p>
+        </div>
+
+        <!-- Events Section -->
+        <div class="events-container" id="events-container">
+            <!-- Events will be dynamically inserted here -->
+        </div>
+
+        <!-- Footer Message -->
+        <div class="client-footer">
+            <p>Thank you for trusting us with your special moments ✨</p>
+            <p class="contact-info">Questions? <a href="mailto:contact@storiesblossomed.ca">Contact us</a></p>
+        </div>
+    </div>
+  </main>
+
+  <script src="../../index.js"></script>
+  <script src="../clients-data.js"></script>
+  <script>
+    // Get current client slug from URL path
+    function getCurrentClientSlug() {
+        const pathParts = window.location.pathname.split('/');
+        const clientsIndex = pathParts.indexOf('clients');
+        if (clientsIndex !== -1 && pathParts[clientsIndex + 1]) {
+            return pathParts[clientsIndex + 1];
+        }
+        return null;
+    }
+
+    const clientSlug = getCurrentClientSlug();
+    const clientData = getClientBySlug(clientSlug);
+
+    if (!clientData) {
+        document.body.innerHTML = '<h1>Client not found</h1>';
+    } else {
+        const CLIENT_PIN = clientData.pin;
+        const CLIENT_KEY = `clientPin_${clientSlug}`;
+
+        // Populate page with client data
+        document.title = `${clientData.name} - Stories Blossomed`;
+        document.getElementById('page-title').textContent = `${clientData.name} - Stories Blossomed`;
+        document.getElementById('client-names').textContent = clientData.name;
+        document.getElementById('client-tagline').textContent = clientData.tagline;
+
+        // Set background image
+        if (clientData.backgroundImage) {
+            document.getElementById('background-image').style.backgroundImage = 
+                `url('${clientData.backgroundImage}')`;
+        }
+
+        // Set PIN hint if available
+        if (clientData.pinHint) {
+            document.getElementById('pin-hint').textContent = `Hint: ${clientData.pinHint}`;
+        }
+
+        // Populate events
+        const eventsContainer = document.getElementById('events-container');
+        clientData.events.forEach(event => {
+            const eventCard = document.createElement('div');
+            eventCard.className = 'event-card';
+            
+            const deliverables = event.deliverables.map(d => `
+                <a href="${d.link}" target="_blank" class="deliverable-link ${d.type}">
+                    <div class="icon">${getIconForType(d.type)}</div>
+                    <div class="details">
+                        <h3>${d.label}</h3>
+                        <p>${d.description}</p>
+                    </div>
+                </a>
+            `).join('');
+
+            eventCard.innerHTML = `
+                <h2 class="event-title">${event.title}</h2>
+                <p class="event-date">${event.date}</p>
+                <div class="deliverables">
+                    ${deliverables}
+                </div>
+            `;
+            
+            eventsContainer.appendChild(eventCard);
+        });
+
+        // PIN verification
+        window.onload = function() {
+            if (sessionStorage.getItem(CLIENT_KEY) === 'true') {
+                showContent();
+            }
+        };
+
+        function checkPin() {
+            const inputPin = document.getElementById('pin-input').value;
+            const errorElement = document.getElementById('pin-error');
+
+            if (inputPin === CLIENT_PIN) {
+                sessionStorage.setItem(CLIENT_KEY, 'true');
+                showContent();
+            } else {
+                errorElement.textContent = 'Incorrect PIN. Please try again.';
+                document.getElementById('pin-input').value = '';
+                
+                // Shake animation
+                document.querySelector('.pin-container').classList.add('shake');
+                setTimeout(() => {
+                    document.querySelector('.pin-container').classList.remove('shake');
+                }, 500);
+            }
+        }
+
+        function showContent() {
+            document.getElementById('pin-overlay').style.display = 'none';
+            document.getElementById('client-content').classList.remove('hidden');
+        }
+
+        // Allow Enter key to submit PIN
+        document.getElementById('pin-input').addEventListener('keypress', function(event) {
+            if (event.key === 'Enter') {
+                checkPin();
+            }
+        });
+    }
+
+    // Helper function to get icon emoji based on deliverable type
+    function getIconForType(type) {
+        const icons = {
+            'photos': '📸',
+            'videos': '🎥',
+            'special': '✨'
+        };
+        return icons[type] || '📎';
+    }
+  </script>
+</body>
+</html>
