@@ -2674,8 +2674,8 @@ footer {
 /* Fixed Logo (Top Left) - Client Pages */
 .logo-link {
     position: fixed;
-    top: 35px;
-    left: 35px;
+    top: 60px;
+    left: 5px;
     z-index: 9997;
     display: inline-block;
     transition: opacity 0.3s ease;

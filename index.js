@@ -82,14 +82,18 @@ document.addEventListener('DOMContentLoaded', function() {
   const toggleBtn = document.querySelector('.theme-toggle');
   const iconEl = document.querySelector('.theme-toggle .theme-icon');
 
-  // Initialize from saved preference
+  // Check for saved theme preference or OS preference
   const saved = localStorage.getItem('sb-theme');
-  if (saved === 'dark') {
-    root.setAttribute('data-theme', 'dark');
-    if (iconEl) iconEl.textContent = iconEl.getAttribute('data-icon-dark') || '☀';
-  } else {
-    root.setAttribute('data-theme', 'light');
-    if (iconEl) iconEl.textContent = iconEl.getAttribute('data-icon-light') || '☾';
+  const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+  
+  // Use saved preference if exists, otherwise use OS preference
+  const initialTheme = saved || (prefersDark ? 'dark' : 'light');
+  
+  root.setAttribute('data-theme', initialTheme);
+  if (iconEl) {
+    iconEl.textContent = initialTheme === 'dark'
+      ? (iconEl.getAttribute('data-icon-dark') || '☀')
+      : (iconEl.getAttribute('data-icon-light') || '☾');
   }
 
   // Toggle handler
