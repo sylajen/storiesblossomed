@@ -10,7 +10,7 @@
 
 .header-content h1 {
     font-size: clamp(2em, 5vw, 3.5em);
-    color: var(--luxury-pink-400, #F07C92);
+    color: var(--luxury-pink-300, #F8A4A4);
     margin: 0 0 10px 0;
     font-weight: 700;
 }
@@ -87,7 +87,7 @@
 }
 
 .no-results p:first-child {
-    color: var(--luxury-pink-400, #F07C92);
+    color: var(--luxury-pink-300, #F8A4A4);
     font-weight: 600;
 }
 
@@ -186,7 +186,7 @@
 .card-name {
     font-size: 1.3em;
     font-weight: 700;
-    color: var(--luxury-pink-400, #F07C92);
+    color: var(--luxury-pink-300, #F8A4A4);
     margin: 0 0 6px 0;
 }
 
@@ -205,7 +205,7 @@
 }
 
 .back-link a {
-    color: var(--luxury-pink-400, #F07C92);
+    color: var(--luxury-pink-300, #F8A4A4);
     font-size: 1.1em;
     text-decoration: none;
     transition: all 0.3s ease;

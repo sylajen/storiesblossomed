@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,700;0,900;1,400;1,500;1,700;1,900&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/styles.css?v=video-overlay-ten-percent-20261028">
+    <script src="/index.js?v=original-colors-20261021"></script>
+    <title>Supersavish</title>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-NPRPVYSVEB"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-NPRPVYSVEB');
+    </script>
+    <meta name="description" content="Supersavish wedding resources by Stories Blossomed. Curated guides, checklists, and tips for planning your wedding.">
+    <link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
+    <style>
+      :root {
+        --supersavish-bg: #f6f1ef;
+        --supersavish-card: #a9a2a0;
+        --supersavish-heading: #3f3a39;
+        --supersavish-body: #ffffff;
+      }
+      .supersavish-section {
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        overflow: hidden;
+        background: var(--supersavish-bg);
+      }
+      .supersavish-full img {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      .supersavish-overlay {
+        position: relative;
+        z-index: 1;
+        text-align: center;
+        padding: 2.5rem 3rem;
+        background: var(--supersavish-card);
+        border-radius: 22px;
+        color: var(--supersavish-body);
+        max-width: 900px;
+        margin: 0 1.5rem;
+      }
+      .supersavish-split {
+        min-height: 100vh;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 3rem;
+        align-items: center;
+        padding: 3rem;
+      }
+      .supersavish-card {
+        background: var(--gradient-card-light);
+        padding: 2rem 2.5rem;
+        border-radius: 22px;
+        color: var(--black-text);
+        box-shadow: 0 18px 40px rgba(248, 164, 164, 0.18);
+        position: relative;
+        overflow: hidden;
+      }
+      .supersavish-card h2 {
+        color: var(--black-text);
+        margin-bottom: 0.75rem;
+      }
+      .supersavish-card p {
+        color: var(--black-text);
+      }
+      .location-card::before {
+        content: "";
+        position: absolute;
+        top: -2.5rem;
+        right: -2.5rem;
+        width: 220px;
+        height: 220px;
+        background-color: var(--black-text);
+        opacity: 0.18;
+        -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='22' fill='none' stroke='%23000' stroke-width='4'/%3E%3Cpath d='M10 32h44' stroke='%23000' stroke-width='4'/%3E%3Cpath d='M32 10c8 8 8 36 0 44' stroke='%23000' stroke-width='4' fill='none'/%3E%3Cpath d='M32 10c-8 8-8 36 0 44' stroke='%23000' stroke-width='4' fill='none'/%3E%3Cpath d='M14 22c6 4 30 4 36 0' stroke='%23000' stroke-width='4' fill='none'/%3E%3Cpath d='M14 42c6-4 30-4 36 0' stroke='%23000' stroke-width='4' fill='none'/%3E%3C/svg%3E") center / contain no-repeat;
+        mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='22' fill='none' stroke='%23000' stroke-width='4'/%3E%3Cpath d='M10 32h44' stroke='%23000' stroke-width='4'/%3E%3Cpath d='M32 10c8 8 8 36 0 44' stroke='%23000' stroke-width='4' fill='none'/%3E%3Cpath d='M32 10c-8 8-8 36 0 44' stroke='%23000' stroke-width='4' fill='none'/%3E%3Cpath d='M14 22c6 4 30 4 36 0' stroke='%23000' stroke-width='4' fill='none'/%3E%3Cpath d='M14 42c6-4 30-4 36 0' stroke='%23000' stroke-width='4' fill='none'/%3E%3C/svg%3E") center / contain no-repeat;
+      }
+      .supersavish-image {
+        width: 100%;
+        height: 70vh;
+        object-fit: cover;
+        border-radius: 18px;
+        box-shadow: 0 20px 50px rgba(63, 58, 57, 0.2);
+      }
+      @media (max-width: 900px) {
+        .supersavish-split {
+          grid-template-columns: 1fr;
+          padding: 2rem;
+        }
+        .supersavish-image {
+          height: 50vh;
+        }
+      }
+    </style>
+  </head>
+  <nav class="site-nav">
+    <ul>
+      <!-- Left Column: Logo -->
+      <li class="nav-left">
+        <a href="/supersavish">
+          <img src="/assets/logo.png" alt="Stories Blossomed Logo" class="logo">
+        </a>
+      </li>
+
+      <!-- Middle Column: Centered Links as a group -->
+      <li class="nav-center">
+        <div class="nav-links">
+          <a href="/stories/" class="nav-hide">Stories</a>
+          <a href="/about/" class="nav-hide">About</a>
+          <a href="/christmas-minis/" class="nav-hide">Christmas Minis</a>
+          <a href="/contact/" class="nav-hide">Contact Us</a>
+        </div>
+      </li>
+
+      <li class="site-nav-cta"><a href="/contact/">Let’s talk</a></li>
+
+      <li class="menu-icon" onclick="toggleMenu()" role="button" tabindex="0" aria-label="Open menu" aria-expanded="false">
+        <div class="icon"><span></span></div>
+      </li>
+    </ul>
+  </nav>
+  <body>
+    <main>
+      <div class="menu-items" id="menu-items">
+        <ul>
+          <li><a href="/stories/">Stories</a></li>
+          <li><a href="/about/">About</a></li>
+          <li><a href="/christmas-minis/">Christmas Minis</a></li>
+          <li><a href="/contact/">Contact Us</a></li>
+        </ul>
+      </div>
+
+      <!-- ****************** SECTION 1 - WELCOME ******************* -->
+      <section class="section1 welcome supersavish-section">
+        <video autoplay loop muted playsinline>
+          <source src="/assets/blossoms.webm" type="video/webm">
+        </video>
+        <div class="hero-text-container">
+          <h1 class="hero-title">Supersavish</h1>
+          <p class="hero-tagline">
+            We’re so happy to have you as part of our special day.
+          </p>
+        </div>
+        <div class="scroll-indicator">
+          <span class="scroll-text">Scroll to explore</span>
+          <span class="scroll-arrow">↓</span>
+        </div>
+      </section>
+
+      <!-- ****************** SECTION 2 - FULL IMAGE ******************* -->
+      <section class="supersavish-section supersavish-full">
+        <img src="/assets/gallery/image1.jpg" alt="Wedding memories">
+      </section>
+
+      <!-- ****************** SECTION 3 - LINKED VLOGS ******************* -->
+      <section class="supersavish-split">
+        <a href="/supersavish/vlogs" aria-label="Go to Wedding Vlogs">
+          <img class="supersavish-image" src="/assets/gallery/image2.jpg" alt="Wedding vlog preview">
+        </a>
+        <div class="supersavish-card">
+          <h2>Wedding Vlogs</h2>
+          <p>Relive the journey through our wedding vlogs, moments, and behind-the-scenes stories. Tap the photo to watch.</p>
+        </div>
+      </section>
+
+      <!-- ****************** SECTION 4 - LOCATION ******************* -->
+      <section class="supersavish-split">
+        <div class="supersavish-card location-card">
+          <h2>Location</h2>
+          <p>Toronto, Ontario</p>
+        </div>
+        <img class="supersavish-image" src="/assets/gallery/image3.jpg" alt="Toronto skyline">
+      </section>
+
+      <!-- ****************** SECTION 5 - FULL IMAGE ******************* -->
+      <section class="supersavish-section supersavish-full">
+        <img src="/assets/gallery/image4.jpg" alt="Celebration moment">
+      </section>
+    </main>
+  </body>
+  <footer class="site-footer">
+    <div class="footer-container">
+      <div class="footer-content">
+        <h3> <a href="/about">About Us</a></h3>
+        <p>Let us show the world how your Stories Blossomed into what it is today.</p>
+      </div>
+      <div class="footer-content">
+        <h3>Contact</h3>
+        <p><a href="mailto://storiesblossomed@gmail.com">storiesblossomed@gmail.com</a></p>
+      </div>
+      <div class="footer-content">
+        <h3>Socials</h3>
+        <p><a target="_blank" href="https://instagram.com/storiesblossomed">Instagram</a></p>
+        <p><a target="_blank" href="https://www.tiktok.com/@storiesblossomed/">TikTok</a></p>
+        <p><a target="_blank" href="https://www.youtube.com/@storiesblossomed">YouTube</a></p>
+      </div>
+    </div>
+    <p>Copyright &#169 <span class="js-year"></span> | Stories Blossomed</p>
+  </footer>
+
+  <script>
+    // Set footer year to current year
+    (function() {
+      var yearEl = document.querySelector('.js-year');
+      if (yearEl) {
+        yearEl.textContent = new Date().getFullYear();
+      }
+    })();
+  </script>
+</html>

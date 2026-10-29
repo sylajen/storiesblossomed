@@ -5,9 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,700;0,900;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../styles.css">
-    <script src="../index.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,700;0,900;1,400;1,500;1,700;1,900&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles.css?v=video-overlay-ten-percent-20261028">
+    <script src="../index.js?v=original-colors-20261021"></script>
     <title>The Experience | Stories Blossomed</title>
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-NPRPVYSVEB"></script>
@@ -21,7 +21,7 @@
     <meta name="description" content="Discover the Stories Blossomed experience. We craft bespoke photography and videography that preserves your most meaningful moments with intention and artistry.">
     <link rel="icon" type="image/x-icon" href="../assets/favicon.ico">
   </head>
-  <nav>
+  <nav class="site-nav">
     <ul>
       <!-- Left Column: Logo -->
       <li class="nav-left">
@@ -35,18 +35,14 @@
         <div class="nav-links">
           <a href="../stories" class="nav-hide active">Stories</a>
           <a href="../about" class="nav-hide">About</a>
+          <a href="../christmas-minis/" class="nav-hide">Christmas Minis</a>
           <a href="../contact" class="nav-hide">Contact Us</a>
         </div>
       </li>
 
-      <!-- Right Column: Theme toggle -->
-      <li class="nav-right">
-        <button class="theme-toggle" aria-label="Toggle theme" title="Toggle theme">
-          <span class="theme-icon" data-icon-light="☾" data-icon-dark="☀">☾</span>
-        </button>
-      </li>
-      
-      <li class="menu-icon" onclick="toggleMenu()">
+      <li class="site-nav-cta"><a href="../contact/">Let’s talk</a></li>
+
+      <li class="menu-icon" onclick="toggleMenu()" role="button" tabindex="0" aria-label="Open menu" aria-expanded="false">
         <div class="icon"><span></span></div>
       </li>
     </ul>
@@ -55,10 +51,10 @@
     <main>
       <div class="menu-items" id="menu-items">
         <ul>
-          <li><a href="../">Home</a></li>
           <li><a href="../stories">Stories</a></li>
           <li><a href="../about">About</a></li>
-          <li><a href="../contact">Contact</a></li>
+          <li><a href="../christmas-minis/">Christmas Minis</a></li>
+          <li><a href="../contact">Contact Us</a></li>
         </ul>
       </div>
       
@@ -74,17 +70,17 @@
       </section>
 
       <!-- ****************** SECTION 2 - PHILOSOPHY ******************* -->
-      <section class="luxury-intro">
+      <section class="luxury-intro" hidden>
         <div class="container">
           <p class="luxury-tagline">Our Approach</p>
           <h2 class="luxury-heading">More than <span class="elegant-accent">videography</span></h2>
-          <p class="luxury-description">At Stories Blossomed, we don't just capture moments - we craft an experience that honours your journey. From your first inquiry to the final gallery reveal, every detail is approached with intention and care.</p>
+          <p class="luxury-description">At Stories Blossomed, we craft an experience that honours your journey. From your first inquiry to the final gallery reveal, every detail is approached with intention and care.</p>
           <p class="luxury-description">We preserve the raw emotions, intimate details, and fleeting glances that make your celebration uniquely yours. Our goal is to create imagery and films that don't just document your day, but become a cherished part of your legacy for generations to come.</p>
         </div>
       </section>
 
       <!-- ****************** SECTION 3 - TAILORED EXPERIENCE ******************* -->
-      <section class="luxury-team">
+      <section class="luxury-team" hidden>
         <div class="container">
           <h2 class="section-title"><span class="elegant-accent">Photography & Videography</span><br>Crafted For You</h2>
           <p class="luxury-description" style="max-width: 800px; margin: 0 auto 3rem;">Whether your celebration unfolds in an intimate backyard or across continents, we create bespoke visual stories that transcend the day itself. Every package is tailored to reflect the scope and spirit of your event, ensuring your story is told authentically.</p>
@@ -111,12 +107,25 @@
         <div class="container featured-films-header">
           <p class="luxury-tagline">Featured Films</p>
           <h2 class="luxury-heading">Stories That Have <span class="elegant-accent">Blossomed</span></h2>
+          <p class="luxury-description">Weddings captured and edited for EM Photo and Film</p>
         </div>
 
         <div class="featured-films-list">
+          <a class="film-card" href="https://youtu.be/-0SUFm3MiwU" target="_blank" rel="noopener">
+            <div class="film-image" style="background-image: url('https://img.youtube.com/vi/-0SUFm3MiwU/maxresdefault.jpg');">
+              <video class="film-video" loop muted playsinline preload="none">
+                <source src="../assets/films/rishani-prikes.webm" type="video/webm">
+              </video>
+            </div>
+            <div class="film-meta">
+              <span class="film-title">Rishani &amp; Prikes - Hindu Wedding Film</span>
+              <span class="film-arrow">▶</span>
+            </div>
+          </a>
+
           <a class="film-card" href="https://www.youtube.com/watch?v=3RM43Xh7ZcY" target="_blank" rel="noopener">
             <div class="film-image" style="background-image: url('../assets/thumbnails/methurra-nirojan-eshoot.jpg');">
-              <video class="film-video" autoplay loop muted playsinline>
+              <video class="film-video" loop muted playsinline preload="none">
                 <source src="../assets/films/methurra-nirojan.webm" type="video/webm">
               </video>
             </div>
@@ -126,9 +135,33 @@
             </div>
           </a>
 
+          <a class="film-card" href="https://youtu.be/92iUlhmZHYs" target="_blank" rel="noopener">
+            <div class="film-image" style="background-image: url('https://img.youtube.com/vi/92iUlhmZHYs/maxresdefault.jpg');">
+              <video class="film-video" loop muted playsinline preload="none">
+                <source src="../assets/films/anita-pranaven.webm" type="video/webm">
+              </video>
+            </div>
+            <div class="film-meta">
+              <span class="film-title">Anita &amp; Pranaven - Hindu Wedding Documentary Style Film - Same Day Edit</span>
+              <span class="film-arrow">▶</span>
+            </div>
+          </a>
+
+          <a class="film-card" href="https://youtu.be/p8UTaovvWts" target="_blank" rel="noopener">
+            <div class="film-image" style="background-image: url('https://img.youtube.com/vi/p8UTaovvWts/maxresdefault.jpg');">
+              <video class="film-video" loop muted playsinline preload="none">
+                <source src="../assets/films/shivaani-omesh.webm" type="video/webm">
+              </video>
+            </div>
+            <div class="film-meta">
+              <span class="film-title">Shivaani &amp; Omesh - Hindu Wedding Film</span>
+              <span class="film-arrow">▶</span>
+            </div>
+          </a>
+
           <a class="film-card" href="https://www.youtube.com/watch?v=KeGIX7g8fYU" target="_blank" rel="noopener">
             <div class="film-image" style="background-image: url('../assets/thumbnails/akshana-gabean-highlight.jpg');">
-              <video class="film-video" autoplay loop muted playsinline>
+              <video class="film-video" loop muted playsinline preload="none">
                 <source src="../assets/films/akshana-gabean.webm" type="video/webm">
               </video>
             </div>
@@ -140,7 +173,7 @@
 
           <a class="film-card" href="https://www.youtube.com/watch?v=5UaqrRHRA-I" target="_blank" rel="noopener">
             <div class="film-image" style="background-image: url('https://img.youtube.com/vi/5UaqrRHRA-I/maxresdefault.jpg');">
-              <video class="film-video" autoplay loop muted playsinline>
+              <video class="film-video" loop muted playsinline preload="none">
                 <source src="../assets/films/krishna-darshan.webm" type="video/webm">
               </video>
             </div>
@@ -150,29 +183,6 @@
             </div>
           </a>
 
-          <a class="film-card" href="https://youtu.be/2pfKM3F_r6M" target="_blank" rel="noopener">
-            <div class="film-image" style="background-image: url('../assets/thumbnails/nithiya-kresanth-highlight.jpg');">
-              <video class="film-video" autoplay loop muted playsinline>
-                <source src="../assets/films/nithiya-kresanth.webm" type="video/webm">
-              </video>
-            </div>
-            <div class="film-meta">
-              <span class="film-title">Nithiya & Kresanth — Hindu Wedding Highlight Film</span>
-              <span class="film-arrow">▶</span>
-            </div>
-          </a>
-
-          <a class="film-card" href="https://www.youtube.com/watch?v=ungB9BwOoyI" target="_blank" rel="noopener">
-            <div class="film-image" style="background-image: url('https://img.youtube.com/vi/ungB9BwOoyI/maxresdefault.jpg');">
-              <video class="film-video" autoplay loop muted playsinline>
-                <source src="../assets/films/vitoora-christopher.webm" type="video/webm">
-              </video>
-            </div>
-            <div class="film-meta">
-              <span class="film-title">Vitoora & Christopher - Hindu & Christian Wedding Highlight Film</span>
-              <span class="film-arrow">▶</span>
-            </div>
-          </a>
         </div>
       </section>
 
@@ -241,7 +251,7 @@
 
     </main>
   </body>
-  <footer>
+  <footer class="site-footer">
     <div class="footer-container">
       <div class="footer-content">
         <h3> <a href="../about/">About Us</a></h3>
@@ -250,7 +260,7 @@
       <div class="footer-content">
         <h3>Contact</h3>
         <!-- <p>Bookings: <a href="info@photoem.net">info@photoem.net</a></p> -->
-        <p>Info: <a href="mailto://storiesblossomed@gmail.com">storiesblossomed@gmail.com</a></p>
+        <p><a href="mailto://storiesblossomed@gmail.com">storiesblossomed@gmail.com</a></p>
       </div>
       <div class="footer-content">
         <h3>Socials</h3>
@@ -259,22 +269,66 @@
         <p><a target=”_blank” href="https://www.youtube.com/@storiesblossomed">YouTube</a></p>
       </div>
     </div>
-    <p>Copyright &#169 2025 | Stories Blossomed</p>
+    <p>Copyright &#169 <span class="js-year"></span> | Stories Blossomed</p>
   </footer>
 
   <script>
-    // Video fade-in for featured films
-    document.addEventListener('DOMContentLoaded', function() {
-      const filmVideos = document.querySelectorAll('.film-video');
-      filmVideos.forEach(function(video) {
+    // Keep only the film nearest the viewport center and its adjacent films playing.
+    (() => {
+      const cards = Array.from(document.querySelectorAll('.film-card'));
+      const videos = cards.map(card => card.querySelector('.film-video')).filter(Boolean);
+      let scheduled = false;
+
+      videos.forEach(function(video) {
         video.addEventListener('loadeddata', function() {
           this.classList.add('loaded');
         });
         video.addEventListener('error', function() {
-          // If video fails to load, keep the background image
           this.style.display = 'none';
         });
       });
-    });
+
+      function updateFeaturedPlayback() {
+        scheduled = false;
+        const viewportCenter = window.innerHeight / 2;
+        const visibleCards = cards
+          .map((card, index) => ({ card, index, rect: card.getBoundingClientRect() }))
+          .filter(item => item.rect.bottom > 0 && item.rect.top < window.innerHeight);
+
+        let centerIndex = -1;
+        if (visibleCards.length) {
+          centerIndex = visibleCards.reduce((closest, item) => {
+            const distance = Math.abs((item.rect.top + item.rect.bottom) / 2 - viewportCenter);
+            return distance < closest.distance ? { index: item.index, distance } : closest;
+          }, { index: visibleCards[0].index, distance: Infinity }).index;
+        }
+
+        videos.forEach(function(video, index) {
+          const shouldPlay = !document.hidden && centerIndex >= 0 && Math.abs(index - centerIndex) <= 1;
+          const isInPlaybackWindow = video.dataset.inPlaybackWindow === 'true';
+
+          if (shouldPlay && !isInPlaybackWindow) {
+            video.dataset.inPlaybackWindow = 'true';
+            video.play().catch(() => {
+              video.dataset.inPlaybackWindow = 'false';
+            });
+          } else if (!shouldPlay && isInPlaybackWindow) {
+            video.dataset.inPlaybackWindow = 'false';
+            video.pause();
+          }
+        });
+      }
+
+      function schedulePlaybackUpdate() {
+        if (scheduled) return;
+        scheduled = true;
+        window.requestAnimationFrame(updateFeaturedPlayback);
+      }
+
+      window.addEventListener('scroll', schedulePlaybackUpdate, { passive: true });
+      window.addEventListener('resize', schedulePlaybackUpdate);
+      document.addEventListener('visibilitychange', schedulePlaybackUpdate);
+      updateFeaturedPlayback();
+    })();
   </script>
 </html>

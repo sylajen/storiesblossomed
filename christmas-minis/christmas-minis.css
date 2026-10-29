@@ -1,0 +1,563 @@
+.christmas-page {
+  --holiday-ink: #302b29;
+  --holiday-muted: #6f6560;
+  --holiday-paper: #f8f4ef;
+  --holiday-blush: #f3e5e2;
+  --holiday-rose: var(--luxury-pink-300);
+  --holiday-green: #283d33;
+  --holiday-line: rgba(48, 43, 41, 0.16);
+}
+
+.christmas-page {
+  background: var(--holiday-paper);
+  color: var(--holiday-ink);
+  font-family: 'Montserrat', sans-serif;
+}
+
+.christmas-page body {
+  width: 100%;
+  background: var(--holiday-paper);
+  color: var(--holiday-ink);
+}
+
+.holiday-hero {
+  display: grid;
+  grid-template-columns: minmax(0, 0.82fr) minmax(0, 1.18fr);
+  align-items: center;
+  gap: clamp(32px, 6vw, 92px);
+  max-width: 1480px;
+  min-height: 650px;
+  margin: 0 auto;
+  padding: 120px 6vw 74px;
+}
+
+.holiday-hero-copy {
+  max-width: 500px;
+  padding: 18px 0;
+}
+
+.holiday-eyebrow {
+  margin: 0 0 18px;
+  color: var(--holiday-rose);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.19em;
+  line-height: 1.5;
+  text-transform: uppercase;
+}
+
+.holiday-hero h1,
+.holiday-section-heading h2,
+.holiday-details h2,
+.holiday-final-cta h2 {
+  margin: 0;
+  color: var(--holiday-ink);
+  font-family: 'Playfair Display', Georgia, serif;
+  font-weight: 400;
+  letter-spacing: -0.035em;
+}
+
+.holiday-hero h1 {
+  max-width: 520px;
+  font-size: clamp(52px, 6.5vw, 88px);
+  line-height: 0.99;
+}
+
+.holiday-hero h1 em {
+  color: var(--holiday-rose);
+  font-weight: 400;
+}
+
+.holiday-lede {
+  max-width: 390px;
+  margin: 25px 0 13px;
+  color: var(--holiday-ink);
+  font-size: clamp(17px, 1.8vw, 21px);
+  font-weight: 500;
+  line-height: 1.55;
+}
+
+.holiday-intro {
+  max-width: 420px;
+  margin: 0 0 26px;
+  color: var(--holiday-muted);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.8;
+}
+
+.holiday-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+  min-height: 50px;
+  padding: 0 20px;
+  background: var(--holiday-green);
+  color: #fff;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.025em;
+  text-decoration: none;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.holiday-button:hover {
+  background: #1d3028;
+  color: #fff;
+  opacity: 1;
+  transform: translateY(-2px);
+}
+
+.holiday-button span,
+.holiday-text-link span {
+  font-size: 17px;
+  line-height: 1;
+}
+
+.holiday-note {
+  max-width: 390px;
+  margin: 13px 0 0;
+  color: var(--holiday-muted);
+  font-size: 11px;
+  font-weight: 400;
+  line-height: 1.65;
+}
+
+.holiday-hero-image {
+  position: relative;
+  width: 100%;
+  height: min(62vw, 550px);
+  min-height: 370px;
+  margin: 0;
+  background: #d8d2c4;
+}
+
+.holiday-hero-image::after {
+  position: absolute;
+  right: -12px;
+  bottom: -12px;
+  z-index: -1;
+  width: 45%;
+  height: 45%;
+  border-right: 1px solid var(--holiday-rose);
+  border-bottom: 1px solid var(--holiday-rose);
+  content: '';
+}
+
+.holiday-hero-image img,
+.holiday-photo img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.holiday-hero-image .holiday-slide {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  object-position: 50% 52%;
+  transition: opacity 800ms ease-in-out;
+}
+
+.holiday-hero-image .holiday-slide.is-active {
+  opacity: 1;
+}
+
+.holiday-hero-image img {
+  object-position: 50% 52%;
+}
+
+.holiday-offer {
+  padding: 88px 6vw 96px;
+  background: #fff;
+}
+
+.holiday-section-heading {
+  max-width: 680px;
+  margin: 0 auto 40px;
+  text-align: center;
+}
+
+.holiday-section-heading .holiday-eyebrow {
+  margin-bottom: 13px;
+}
+
+.holiday-section-heading h2,
+.holiday-details h2,
+.holiday-final-cta h2 {
+  font-size: clamp(34px, 4.2vw, 54px);
+  line-height: 1.12;
+}
+
+.holiday-section-heading > p:last-child {
+  margin: 14px auto 0;
+  color: var(--holiday-muted);
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 1.7;
+}
+
+.holiday-offer-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.holiday-offer-card {
+  min-height: 205px;
+  padding: 27px 30px;
+  border-top: 1px solid var(--holiday-rose);
+  background: var(--holiday-paper);
+}
+
+.holiday-card-number {
+  color: var(--holiday-rose);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+}
+
+.holiday-offer-card h3 {
+  margin: 24px 0 10px;
+  color: var(--holiday-ink);
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 25px;
+  font-weight: 500;
+}
+
+.holiday-offer-card p {
+  max-width: 370px;
+  margin: 0;
+  color: var(--holiday-muted);
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 1.75;
+}
+
+.holiday-gallery {
+  padding: 94px 6vw 100px;
+}
+
+.holiday-gallery-heading {
+  margin-bottom: 36px;
+}
+
+.holiday-gallery-heading h2 {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.holiday-photo-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr 0.8fr;
+  gap: 14px;
+  max-width: 1240px;
+  height: 330px;
+  margin: 0 auto;
+}
+
+.holiday-photo {
+  min-width: 0;
+  height: 100%;
+  margin: 0;
+  overflow: hidden;
+  background: var(--holiday-blush);
+}
+
+.holiday-photo img {
+  transition: transform 0.45s ease;
+}
+
+.holiday-photo:hover img {
+  transform: scale(1.025);
+}
+
+.holiday-photo-wide img {
+  object-position: 52% 55%;
+}
+
+.holiday-photo:nth-child(2) img {
+  object-position: 50% 50%;
+}
+
+.holiday-photo:nth-child(3) img {
+  object-position: 50% 50%;
+}
+
+.holiday-details {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: clamp(36px, 8vw, 120px);
+  padding: 92px max(6vw, calc((100vw - 1240px) / 2));
+  background: var(--holiday-blush);
+}
+
+.holiday-details-copy {
+  max-width: 440px;
+}
+
+.holiday-details-copy > p:not(.holiday-eyebrow) {
+  margin: 18px 0 19px;
+  color: var(--holiday-muted);
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 1.8;
+}
+
+.holiday-text-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 13px;
+  color: var(--holiday-rose);
+  font-size: 12px;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.holiday-text-link:hover {
+  color: var(--holiday-ink);
+  opacity: 1;
+}
+
+.holiday-faq-list {
+  border-top: 1px solid rgba(48, 43, 41, 0.2);
+}
+
+.holiday-faq-list details {
+  border-bottom: 1px solid rgba(48, 43, 41, 0.2);
+}
+
+.holiday-faq-list summary {
+  position: relative;
+  padding: 19px 28px 19px 0;
+  color: var(--holiday-ink);
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 500;
+  list-style: none;
+}
+
+.holiday-faq-list summary::-webkit-details-marker {
+  display: none;
+}
+
+.holiday-faq-list summary::after {
+  position: absolute;
+  right: 2px;
+  content: '+';
+  color: var(--holiday-rose);
+  font-size: 19px;
+  font-weight: 300;
+}
+
+.holiday-faq-list details[open] summary::after {
+  content: '−';
+}
+
+.holiday-faq-list details p {
+  max-width: 560px;
+  margin: -2px 28px 19px 0;
+  color: var(--holiday-muted);
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.75;
+}
+
+.holiday-final-cta {
+  padding: 82px 24px 88px;
+  background: var(--holiday-green);
+  text-align: center;
+}
+
+.holiday-final-cta .holiday-eyebrow {
+  color: #e6b5bd;
+}
+
+.holiday-final-cta h2 {
+  max-width: 650px;
+  margin: 0 auto 27px;
+  color: #fff;
+}
+
+.holiday-button-light {
+  border: 1px solid #f3dce0;
+  background: transparent;
+  color: #fff;
+}
+
+.holiday-button-light:hover {
+  background: #fff;
+  color: var(--holiday-green);
+}
+
+.christmas-page nav.site-nav .site-nav-cta a {
+  border-color: var(--holiday-green);
+  color: var(--holiday-green);
+}
+
+.christmas-page nav.site-nav .site-nav-cta a:hover {
+  background: var(--holiday-green);
+  color: #fff;
+}
+
+.christmas-page .menu-items a:hover {
+  color: var(--holiday-green);
+}
+
+.christmas-page footer.holiday-footer {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 9px 22px;
+  padding: 27px 22px;
+  background: #f1eae3;
+  color: var(--holiday-muted);
+  text-align: center;
+}
+
+.holiday-footer p,
+.holiday-footer a {
+  margin: 0;
+  color: var(--holiday-muted);
+  font-size: 11px;
+  font-weight: 400;
+  text-decoration: none;
+}
+
+.holiday-footer .holiday-footer-brand {
+  color: var(--holiday-ink);
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 17px;
+}
+
+.holiday-footer .holiday-copyright {
+  flex-basis: 100%;
+  margin-top: 6px;
+  font-size: 10px;
+}
+
+@media (max-width: 850px) {
+  .holiday-hero {
+    grid-template-columns: 1fr;
+    gap: 34px;
+    min-height: auto;
+    padding: 112px 7vw 60px;
+  }
+
+  .holiday-hero-copy {
+    max-width: 620px;
+    padding: 0;
+  }
+
+  .holiday-hero-image {
+    height: 58vw;
+    min-height: 310px;
+    max-height: 500px;
+  }
+
+  .holiday-details {
+    grid-template-columns: 1fr;
+    gap: 34px;
+    padding: 72px 7vw;
+  }
+}
+
+@media (max-width: 600px) {
+  .holiday-hero {
+    gap: 28px;
+    padding: 100px 22px 48px;
+  }
+
+  .holiday-hero h1 {
+    font-size: clamp(48px, 15vw, 68px);
+  }
+
+  .holiday-hero-image {
+    height: 105vw;
+    min-height: 300px;
+    max-height: 420px;
+  }
+
+  .holiday-offer,
+  .holiday-gallery {
+    padding: 66px 22px;
+  }
+
+  .holiday-section-heading {
+    margin-bottom: 28px;
+  }
+
+  .holiday-offer-grid {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .holiday-offer-card {
+    min-height: auto;
+    padding: 22px 20px 24px;
+  }
+
+  .holiday-offer-card h3 {
+    margin-top: 16px;
+  }
+
+  .holiday-photo-grid {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 220px 150px;
+    height: auto;
+    gap: 9px;
+  }
+
+  .holiday-photo-wide {
+    grid-column: 1 / -1;
+  }
+
+  .holiday-details {
+    padding: 66px 22px;
+  }
+
+  .holiday-final-cta {
+    padding: 66px 22px 72px;
+  }
+
+  .christmas-page footer.holiday-footer {
+    flex-direction: column;
+    gap: 9px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .christmas-page *,
+  .christmas-page *::before,
+  .christmas-page *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Temporary photo visibility: remove holiday-images-hidden from the html
+   element to restore the hero slideshow and gallery photos. */
+.christmas-page.holiday-images-hidden .holiday-hero-image,
+.christmas-page.holiday-images-hidden .holiday-photo-grid {
+  display: none;
+}
+
+.christmas-page.holiday-images-hidden .holiday-hero {
+  grid-template-columns: minmax(0, 1fr);
+  min-height: auto;
+}
+
+.christmas-page.holiday-images-hidden .holiday-hero-copy {
+  width: 100%;
+  max-width: 680px;
+  margin: 0 auto;
+}
+
+.christmas-page.holiday-images-hidden .holiday-gallery-heading {
+  margin-bottom: 0;
+}

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="client-area-page clients-hub-page">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -17,10 +17,10 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,700;0,900;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="../styles.css?v=client-style-20261028-4">
 </head>
 <body>
-  <nav>
+  <nav class="site-nav">
     <ul>
       <!-- Left Column: Logo -->
       <li class="nav-left">
@@ -28,19 +28,31 @@
           <img src="../assets/logo.png" alt="Stories Blossomed Logo" class="logo">
         </a>
       </li>
-      
-      <!-- Right Column: Theme toggle -->
-      <li class="nav-right">
-        <button class="theme-toggle" aria-label="Toggle theme" title="Toggle theme">
-          <span class="theme-icon" data-icon-light="☾" data-icon-dark="☀">☾</span>
-        </button>
+
+      <li class="nav-center">
+        <div class="nav-links">
+          <a href="/stories/">Stories</a>
+          <a href="/about/">About</a>
+          <a href="/christmas-minis/">Christmas Minis</a>
+          <a href="/contact/">Contact Us</a>
+        </div>
       </li>
-      
-      <li class="menu-icon" onclick="toggleMenu()">
+
+      <li class="site-nav-cta"><a href="/contact/">Let’s talk</a></li>
+      <li class="menu-icon" onclick="toggleMenu()" role="button" tabindex="0" aria-label="Open menu" aria-expanded="false">
         <div class="icon"><span></span></div>
       </li>
     </ul>
   </nav>
+
+  <div class="menu-items" id="menu-items">
+    <ul>
+      <li><a href="/stories/">Stories</a></li>
+      <li><a href="/about/">About</a></li>
+      <li><a href="/christmas-minis/">Christmas Minis</a></li>
+      <li><a href="/contact/">Contact Us</a></li>
+    </ul>
+  </div>
 
   <main>
     <header class="clients-hub-header">
@@ -60,7 +72,7 @@
                 placeholder="Search for your name..."
                 autocomplete="off"
             >
-            <span class="search-icon">🔍</span>
+            <span class="search-icon" aria-hidden="true"></span>
         </div>
         <p class="search-hint" id="search-hint"></p>
     </div>
@@ -82,8 +94,8 @@
     </div>
   </main>
 
-  <script src="index.js"></script>
+  <script src="../index.js?v=original-colors-20261021"></script>
   <script src="clients-data.js"></script>
-  <script src="clients-hub.js"></script>
+  <script src="clients-hub.js?v=client-style-20261028-3"></script>
 </body>
 </html>

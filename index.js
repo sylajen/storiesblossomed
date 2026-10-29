@@ -1,18 +1,28 @@
 function toggleMenu() {
   var menu = document.getElementById("menu-items");
   var menuIcon = document.querySelector(".menu-icon");
+
+  if (!menu || !menuIcon) return;
   
   if (menu.classList.contains("show-menu")) {
     menu.classList.remove("show-menu");
     menuIcon.classList.remove("active");
+    menuIcon.setAttribute("aria-expanded", "false");
+    menuIcon.setAttribute("aria-label", "Open menu");
   } else {
     menu.classList.add("show-menu");
     menuIcon.classList.add("active");
+    menuIcon.setAttribute("aria-expanded", "true");
+    menuIcon.setAttribute("aria-label", "Close menu");
   }
 }
 
 // Close menu when clicking on a link
 document.addEventListener('DOMContentLoaded', function() {
+  document.querySelectorAll('.js-year').forEach(function(year) {
+    year.textContent = new Date().getFullYear();
+  });
+
   const menuLinks = document.querySelectorAll('.menu-items a');
   const menuIcon = document.querySelector(".menu-icon");
   const menu = document.getElementById("menu-items");
@@ -24,9 +34,20 @@ document.addEventListener('DOMContentLoaded', function() {
       }
       if (menuIcon) {
         menuIcon.classList.remove("active");
+        menuIcon.setAttribute("aria-expanded", "false");
+        menuIcon.setAttribute("aria-label", "Open menu");
       }
     });
   });
+
+  if (menuIcon) {
+    menuIcon.addEventListener('keydown', function(event) {
+      if (event.key === 'Enter' || event.key === ' ') {
+        event.preventDefault();
+        toggleMenu();
+      }
+    });
+  }
   
   // Close menu when clicking outside
   document.addEventListener('click', function(event) {
@@ -35,7 +56,11 @@ document.addEventListener('DOMContentLoaded', function() {
     
     if (!isClickInsideMenu && !isClickOnMenuIcon && menu && menu.classList.contains("show-menu")) {
       menu.classList.remove("show-menu");
-      if (menuIcon) menuIcon.classList.remove("active");
+      if (menuIcon) {
+        menuIcon.classList.remove("active");
+        menuIcon.setAttribute("aria-expanded", "false");
+        menuIcon.setAttribute("aria-label", "Open menu");
+      }
     }
   });
 });
@@ -46,6 +71,7 @@ document.addEventListener('DOMContentLoaded', function() {
   const video = document.getElementById('parallax-video');
   
   function handleScroll() {
+    if (!video) return;
     const scrollPosition = window.scrollY;
     const translateValue = scrollPosition * 50; // Adjust the value to control the parallax effect
   
@@ -54,60 +80,3 @@ document.addEventListener('DOMContentLoaded', function() {
   
   window.addEventListener('scroll', handleScroll);
 
-  // Rotating words animation
-  document.addEventListener('DOMContentLoaded', function() {
-    const words = document.querySelectorAll('.rotating-word');
-    if (words.length === 0) return;
-    
-    let currentIndex = 0;
-    
-    function rotateWords() {
-      // Remove active class from current word
-      words[currentIndex].classList.remove('active');
-      
-      // Move to next word
-      currentIndex = (currentIndex + 1) % words.length;
-      
-      // Add active class to next word
-      words[currentIndex].classList.add('active');
-    }
-    
-    // Rotate every 3 seconds
-    setInterval(rotateWords, 3000);
-  });
-
-// Theme toggle
-document.addEventListener('DOMContentLoaded', function() {
-  const root = document.documentElement; // <html>
-  const toggleBtn = document.querySelector('.theme-toggle');
-  const iconEl = document.querySelector('.theme-toggle .theme-icon');
-
-  // Check for saved theme preference or OS preference
-  const saved = localStorage.getItem('sb-theme');
-  const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-  
-  // Use saved preference if exists, otherwise use OS preference
-  const initialTheme = saved || (prefersDark ? 'dark' : 'light');
-  
-  root.setAttribute('data-theme', initialTheme);
-  if (iconEl) {
-    iconEl.textContent = initialTheme === 'dark'
-      ? (iconEl.getAttribute('data-icon-dark') || '☀')
-      : (iconEl.getAttribute('data-icon-light') || '☾');
-  }
-
-  // Toggle handler
-  if (toggleBtn) {
-    toggleBtn.addEventListener('click', function() {
-      const isDark = root.getAttribute('data-theme') === 'dark';
-      const next = isDark ? 'light' : 'dark';
-      root.setAttribute('data-theme', next);
-      localStorage.setItem('sb-theme', next);
-      if (iconEl) {
-        iconEl.textContent = next === 'dark'
-          ? (iconEl.getAttribute('data-icon-dark') || '☀')
-          : (iconEl.getAttribute('data-icon-light') || '☾');
-      }
-    });
-  }
-});

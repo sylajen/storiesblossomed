@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,700;0,900;1,400;1,500;1,700;1,900&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/styles.css?v=video-overlay-ten-percent-20261028">
+    <script src="/index.js?v=original-colors-20261021"></script>
+    <title>Wedding Vlogs | Supersavish</title>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-NPRPVYSVEB"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-NPRPVYSVEB');
+    </script>
+    <meta name="description" content="Wedding vlogs and memories.">
+    <link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
+    <style>
+      .vlogs-hero {
+        min-height: 70vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        background: var(--gradient-hero);
+        padding: 6rem 2rem 4rem;
+      }
+      .vlogs-hero .hero-text {
+        max-width: 820px;
+        width: 100%;
+        padding: 0 1rem;
+      }
+      .vlogs-hero .hero-title {
+        text-shadow: 0 2px 8px rgba(248, 164, 164, 0.4);
+      }
+      .vlogs-hero .hero-tagline {
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+        text-shadow: 0 2px 6px rgba(248, 164, 164, 0.35);
+      }
+      .vlogs-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 2rem;
+        padding: 3rem 2.5rem 5rem;
+      }
+      .vlog-card {
+        background: var(--gradient-card-light);
+        border-radius: 22px;
+        overflow: hidden;
+        box-shadow: 0 18px 40px rgba(248, 164, 164, 0.18);
+        color: var(--black-text);
+      }
+      .vlog-card img {
+        width: 100%;
+        height: 240px;
+        object-fit: cover;
+        display: block;
+      }
+      .vlog-card .vlog-body {
+        padding: 1.75rem 2rem 2rem;
+      }
+      .vlog-card h3 {
+        margin: 0 0 0.75rem;
+        color: var(--black-text);
+      }
+      .vlog-card p {
+        margin: 0;
+        color: var(--black-text);
+      }
+    </style>
+  </head>
+  <nav class="site-nav">
+    <ul>
+      <li class="nav-left">
+        <a href="/supersavish">
+          <img src="/assets/logo.png" alt="Stories Blossomed Logo" class="logo">
+        </a>
+      </li>
+      <li class="nav-center">
+        <div class="nav-links">
+          <a href="/stories/" class="nav-hide">Stories</a>
+          <a href="/about/" class="nav-hide">About</a>
+          <a href="/christmas-minis/" class="nav-hide">Christmas Minis</a>
+          <a href="/contact/" class="nav-hide">Contact Us</a>
+        </div>
+      </li>
+      <li class="site-nav-cta"><a href="/contact/">Let’s talk</a></li>
+      <li class="menu-icon" onclick="toggleMenu()" role="button" tabindex="0" aria-label="Open menu" aria-expanded="false">
+        <div class="icon"><span></span></div>
+      </li>
+    </ul>
+  </nav>
+  <body>
+    <main>
+      <div class="menu-items" id="menu-items">
+        <ul>
+          <li><a href="/stories/">Stories</a></li>
+          <li><a href="/about/">About</a></li>
+          <li><a href="/christmas-minis/">Christmas Minis</a></li>
+          <li><a href="/contact/">Contact Us</a></li>
+        </ul>
+      </div>
+
+      <section class="vlogs-hero">
+        <div class="hero-text">
+          <h1 class="hero-title">Wedding Vlogs</h1>
+          <p class="hero-tagline">Moments, memories, and behind-the-scenes stories.</p>
+        </div>
+      </section>
+
+      <section class="vlogs-grid">
+        <article class="vlog-card">
+          <a href="https://youtu.be/BOdh7r6gAhc" target="_blank" rel="noopener noreferrer">
+            <img src="https://img.youtube.com/vi/BOdh7r6gAhc/hqdefault.jpg" alt="March 12, 2025 - First Post thumbnail">
+          </a>
+          <div class="vlog-body">
+            <h3>March 12, 2025 - First Post</h3>
+            <p>Hello world! Let’s start with where all the wedding stuff officially began! Stay tuned for more wedding planning related vlogs :)</p>
+          </div>
+        </article>
+        <article class="vlog-card">
+          <a href="https://youtu.be/NQJ_4EfzyGg" target="_blank" rel="noopener noreferrer">
+            <img src="https://img.youtube.com/vi/NQJ_4EfzyGg/hqdefault.jpg" alt="March 15, 2025 - The Garden Events Centre thumbnail">
+          </a>
+          <div class="vlog-body">
+            <h3>March 15, 2025 - The Garden Events Centre</h3>
+            <p>Come along with us on a tour of The Garden Events Centre when we visited their open house on March 4th this year.</p>
+          </div>
+        </article>
+        <article class="vlog-card">
+          <a href="https://youtu.be/wuk3EXnxTxw" target="_blank" rel="noopener noreferrer">
+            <img src="https://img.youtube.com/vi/wuk3EXnxTxw/hqdefault.jpg" alt="March 20, 2025 - Samyukta Photoshoot Day 1 thumbnail">
+          </a>
+          <div class="vlog-body">
+            <h3>March 20, 2025 - Samyukta Photoshoot Day 1</h3>
+            <p>Day 1 of trying to take pictures for the Samyukta photoshoot contest — results at the end :)</p>
+          </div>
+        </article>
+        <article class="vlog-card">
+          <a href="https://youtu.be/mQUzppo8XHQ" target="_blank" rel="noopener noreferrer">
+            <img src="https://img.youtube.com/vi/mQUzppo8XHQ/hqdefault.jpg" alt="Save the Date thumbnail">
+          </a>
+          <div class="vlog-body">
+            <h3>Save the Date</h3>
+            <p>A little save the date video we did :)</p>
+          </div>
+        </article>
+      </section>
+    </main>
+  </body>
+  <footer class="site-footer">
+    <div class="footer-container">
+      <div class="footer-content">
+        <h3><a href="/about">About Us</a></h3>
+        <p>Let us show the world how your Stories Blossomed into what it is today.</p>
+      </div>
+      <div class="footer-content">
+        <h3>Contact</h3>
+        <p><a href="mailto://storiesblossomed@gmail.com">storiesblossomed@gmail.com</a></p>
+      </div>
+      <div class="footer-content">
+        <h3>Socials</h3>
+        <p><a target="_blank" href="https://instagram.com/storiesblossomed">Instagram</a></p>
+        <p><a target="_blank" href="https://www.tiktok.com/@storiesblossomed/">TikTok</a></p>
+        <p><a target="_blank" href="https://www.youtube.com/@storiesblossomed">YouTube</a></p>
+      </div>
+    </div>
+    <p>Copyright &#169 <span class="js-year"></span> | Stories Blossomed</p>
+  </footer>
+
+  <script>
+    (function() {
+      var yearEl = document.querySelector('.js-year');
+      if (yearEl) {
+        yearEl.textContent = new Date().getFullYear();
+      }
+    })();
+  </script>
+</html>

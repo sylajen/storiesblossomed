@@ -1,13 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="home-page">
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,700;0,900;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
-    <script src="index.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,700;0,900;1,400;1,500;1,700;1,900&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css?v=video-overlay-ten-percent-20261028">
+    <script src="index.js?v=original-colors-20261021"></script>
     <title>Stories Blossomed</title>
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-NPRPVYSVEB"></script>
@@ -17,12 +17,12 @@
       gtag('js', new Date());
 
       gtag('config', 'G-NPRPVYSVEB');
-    </script>
+    </script> 
     <meta name="description" content="Toronto Photography and Videography | Professional photography and videography for your next wedding, birthday, 
     Instagram post, LinkedIn headshot, and much much more">
     <link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
   </head> 
-  <nav>
+  <nav class="site-nav">
     <ul>
       <!-- Left Column: Logo -->
       <li class="nav-left">
@@ -36,18 +36,14 @@
         <div class="nav-links">
           <a href="/stories" class="nav-hide">Stories</a>
           <a href="/about" class="nav-hide">About</a>
+          <a href="/christmas-minis/" class="nav-hide">Christmas Minis</a>
           <a href="/contact" class="nav-hide">Contact Us</a>
         </div>
       </li>
 
-      <!-- Right Column: Theme toggle -->
-      <li class="nav-right">
-        <button class="theme-toggle" aria-label="Toggle theme" title="Toggle theme">
-          <span class="theme-icon" data-icon-light="☾" data-icon-dark="☀">☾</span>
-        </button>
-      </li>
-      
-      <li class="menu-icon" onclick="toggleMenu()">
+      <li class="site-nav-cta"><a href="/contact/">Let’s talk</a></li>
+
+      <li class="menu-icon" onclick="toggleMenu()" role="button" tabindex="0" aria-label="Open menu" aria-expanded="false">
         <div class="icon"><span></span></div>
       </li>
     </ul>
@@ -56,30 +52,25 @@
     <main>
       <div class="menu-items" id="menu-items">
         <ul>
-          <li><a href="/">Home</a></li>
           <li><a href="/stories">Stories</a></li>
           <li><a href="/about">About</a></li>
-          <li><a href="/contact">Contact</a></li>
+          <li><a href="/christmas-minis/">Christmas Minis</a></li>
+          <li><a href="/contact">Contact Us</a></li>
         </ul>
       </div>
       
       <!-- ****************** SECTION 1 - HERO ******************* -->
       <section class="section1 welcome">
-        <video autoplay loop muted playsinline>
+        <video autoplay loop muted playsinline preload="auto">
+          <source src="assets/blossoms.mp4" type="video/mp4">
           <source src="assets/blossoms.webm" type="video/webm">
         </video>
         <div class="hero-text-container">
           <h1 class="hero-title">Stories Blossomed</h1>
-          <p class="hero-tagline">
-            Capturing your 
-            <span class="rotating-words">
-              <span class="rotating-word active">love story</span>
-              <span class="rotating-word">cherished moments</span>
-              <span class="rotating-word">wedding day</span>
-              <span class="rotating-word">engagement</span>
-              <span class="rotating-word">legacy</span>
-            </span>
-          </p>
+          <a class="holiday-home-link" href="/christmas-minis/">
+            <span>Christmas minis · Greater Toronto Area · 2026</span>
+            <span>Photo + short film sessions <span aria-hidden="true">→</span></span>
+          </a>
         </div>
         <div class="scroll-indicator">
           <span class="scroll-text">Scroll to explore</span>
@@ -106,19 +97,16 @@
           <h2 class="section-title">Our <span class="elegant-accent">Services</span></h2>
           <div class="services-grid">
             <div class="service-card">
-              <div class="service-icon">💍</div>
               <h3>Weddings</h3>
               <p>Timeless documentation of your perfect day, from intimate moments to grand celebrations</p>
             </div>
             <div class="service-card">
-              <div class="service-icon">📸</div>
               <h3>Portrait Sessions</h3>
               <p>Elegant photography for engagements, families, and professional headshots</p>
             </div>
             <div class="service-card">
-              <div class="service-icon">🎬</div>
               <h3>Cinematic Films</h3>
-              <p>Beautifully crafted video narratives that capture the essence of your story</p>
+              <p>Films for brands, artists, creators, families, and the stories worth sharing.</p>
             </div>
           </div>
         </div>
@@ -136,12 +124,12 @@
             </div>
             <div class="experience-step">
               <span class="step-num">02</span>
-              <h3>Artful Capture</h3>
+              <h3>The Wedding Day</h3>
               <p>On the day, we blend direction with discretion - capturing those important moments and the authentic emotions.</p>
             </div>
             <div class="experience-step">
               <span class="step-num">03</span>
-              <h3>Signature Delivery</h3>
+              <h3>Your Films &amp; Photos</h3>
               <p>Your story arrives beautifully edited and curated - designed to be relived, shared, and treasured for years.</p>
             </div>
           </div>
@@ -157,7 +145,7 @@
         </div>
       </section>
   </body>
-  <footer>
+  <footer class="site-footer">
     <div class="footer-container">
       <div class="footer-content">
         <h3> <a href="../about/">About Us</a></h3>
@@ -166,7 +154,7 @@
       <div class="footer-content">
         <h3>Contact</h3>
         <!-- <p>Wedding Bookings: <a href="info@photoem.net">info@photoem.net</a></p> -->
-        <p>Info: <a href="mailto://storiesblossomed@gmail.com">storiesblossomed@gmail.com</a></p>
+        <p><a href="mailto://storiesblossomed@gmail.com">storiesblossomed@gmail.com</a></p>
       </div>
       <div class="footer-content">
         <h3>Socials</h3>

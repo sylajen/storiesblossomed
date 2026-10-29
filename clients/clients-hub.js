@@ -125,6 +125,8 @@ function recalculateMasonry() {
         columnCount = 3;
     }
 
+    columnCount = Math.min(columnCount, cards.length);
+
     // Set CSS grid columns
     container.style.gridTemplateColumns = `repeat(${columnCount}, 1fr)`;
 }

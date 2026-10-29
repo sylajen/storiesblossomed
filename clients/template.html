@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="client-area-page client-gallery-page">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,10 +14,10 @@
     gtag('config', 'G-NPRPVYSVEB');
     </script>
     <link rel="icon" type="image/x-icon" href="../../assets/favicon.ico">
-    <link rel="stylesheet" href="../../styles.css">
+    <link rel="stylesheet" href="../../styles.css?v=client-style-20261028-4">
 </head>
 <body>
-  <nav>
+    <nav class="site-nav">
     <ul>
       <!-- Left Column: Logo -->
       <li class="nav-left">
@@ -25,19 +25,31 @@
           <img src="../../assets/logo.png" alt="Stories Blossomed Logo" class="logo">
         </a>
       </li>
-      
-      <!-- Right Column: Theme toggle -->
-      <li class="nav-right">
-        <button class="theme-toggle" aria-label="Toggle theme" title="Toggle theme">
-          <span class="theme-icon" data-icon-light="☾" data-icon-dark="☀">☾</span>
-        </button>
-      </li>
-      
-      <li class="menu-icon" onclick="toggleMenu()">
+
+            <li class="nav-center">
+                <div class="nav-links">
+                    <a href="/stories/">Stories</a>
+                    <a href="/about/">About</a>
+                    <a href="/christmas-minis/">Christmas Minis</a>
+                    <a href="/contact/">Contact Us</a>
+                </div>
+            </li>
+
+            <li class="site-nav-cta"><a href="/contact/">Let’s talk</a></li>
+            <li class="menu-icon" onclick="toggleMenu()" role="button" tabindex="0" aria-label="Open menu" aria-expanded="false">
         <div class="icon"><span></span></div>
       </li>
     </ul>
   </nav>
+
+    <div class="menu-items" id="menu-items">
+        <ul>
+            <li><a href="/stories/">Stories</a></li>
+            <li><a href="/about/">About</a></li>
+            <li><a href="/christmas-minis/">Christmas Minis</a></li>
+            <li><a href="/contact/">Contact Us</a></li>
+        </ul>
+    </div>
 
   <main>
     
@@ -133,7 +145,7 @@
     </div>
   </main>
 
-  <script src="../../index.js"></script>
+    <script src="../../index.js?v=original-colors-20261021"></script>
   <script>
     // CONFIGURATION: Set the PIN for this client page
     const CLIENT_PIN = '[PIN_CODE]'; // Change this for each client
